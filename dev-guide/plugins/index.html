@@ -1,0 +1,1287 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Photo-ID 說明文件">
+      
+      
+        <meta name="author" content="Netabox">
+      
+      
+        <link rel="canonical" href="https://www.mkdocs.org/dev-guide/plugins/">
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.1.6">
+    
+    
+      
+        <title>MkDocs Plugins - Photo-ID Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.cd566b2a.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.e6a45f82.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#mkdocs-plugins" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Photo-ID Docs" class="md-header__button md-logo" aria-label="Photo-ID Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Photo-ID Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              MkDocs Plugins
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/mkdocs/mkdocs/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Photo-ID Docs" class="md-nav__button md-logo" aria-label="Photo-ID Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Photo-ID Docs
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/mkdocs/mkdocs/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        首頁
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/" class="md-nav__link">
+        入門
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          使用手冊
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="使用手冊" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          使用手冊
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guide/" class="md-nav__link">
+        用戶指南
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guide/installation/" class="md-nav__link">
+        MkDocs 安裝
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guide/writing-your-docs/" class="md-nav__link">
+        編寫您的文件
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guide/choosing-your-theme/" class="md-nav__link">
+        選擇你的主題
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guide/customizing-your-theme/" class="md-nav__link">
+        自訂你的主題
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guide/localizing-your-theme/" class="md-nav__link">
+        本地化你的主題
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guide/configuration/" class="md-nav__link">
+        配置
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guide/deploying-your-docs/" class="md-nav__link">
+        部署你的文件
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          關於
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="關於" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          關於
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/release-notes/" class="md-nav__link">
+        Release Notes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/contributing/" class="md-nav__link">
+        Contributing
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/license/" class="md-nav__link">
+        License
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installing-plugins" class="md-nav__link">
+    Installing Plugins
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-plugins" class="md-nav__link">
+    Using Plugins
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#developing-plugins" class="md-nav__link">
+    Developing Plugins
+  </a>
+  
+    <nav class="md-nav" aria-label="Developing Plugins">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#baseplugin" class="md-nav__link">
+    BasePlugin
+  </a>
+  
+    <nav class="md-nav" aria-label="BasePlugin">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#config_scheme" class="md-nav__link">
+    config_scheme
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#config" class="md-nav__link">
+    config
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#load_configoptions" class="md-nav__link">
+    load_config(options)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#on_event_name" class="md-nav__link">
+    on_&lt;event_name&gt;()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#events" class="md-nav__link">
+    Events
+  </a>
+  
+    <nav class="md-nav" aria-label="Events">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#global-events" class="md-nav__link">
+    Global Events
+  </a>
+  
+    <nav class="md-nav" aria-label="Global Events">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#on_serve" class="md-nav__link">
+    on_serve
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#on_config" class="md-nav__link">
+    on_config
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#on_pre_build" class="md-nav__link">
+    on_pre_build
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#on_files" class="md-nav__link">
+    on_files
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#on_nav" class="md-nav__link">
+    on_nav
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#on_env" class="md-nav__link">
+    on_env
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#on_post_build" class="md-nav__link">
+    on_post_build
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#on_build_error" class="md-nav__link">
+    on_build_error
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#template-events" class="md-nav__link">
+    Template Events
+  </a>
+  
+    <nav class="md-nav" aria-label="Template Events">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#on_pre_template" class="md-nav__link">
+    on_pre_template
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#on_template_context" class="md-nav__link">
+    on_template_context
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#on_post_template" class="md-nav__link">
+    on_post_template
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#page-events" class="md-nav__link">
+    Page Events
+  </a>
+  
+    <nav class="md-nav" aria-label="Page Events">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#on_pre_page" class="md-nav__link">
+    on_pre_page
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#on_page_read_source" class="md-nav__link">
+    on_page_read_source
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#on_page_markdown" class="md-nav__link">
+    on_page_markdown
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#on_page_content" class="md-nav__link">
+    on_page_content
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#on_page_context" class="md-nav__link">
+    on_page_context
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#on_post_page" class="md-nav__link">
+    on_post_page
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#handling-errors" class="md-nav__link">
+    Handling Errors
+  </a>
+  
+    <nav class="md-nav" aria-label="Handling Errors">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mkdocsexceptionsmkdocsexception" class="md-nav__link">
+    mkdocs.exceptions.MkDocsException
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mkdocsexceptionsconfigurationerror" class="md-nav__link">
+    mkdocs.exceptions.ConfigurationError
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mkdocsexceptionsbuilderror" class="md-nav__link">
+    mkdocs.exceptions.BuildError
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mkdocsexceptionspluginerror" class="md-nav__link">
+    mkdocs.exceptions.PluginError
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#entry-point" class="md-nav__link">
+    Entry Point
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+<h1 id="mkdocs-plugins">MkDocs Plugins<a class="headerlink" href="#mkdocs-plugins" title="Permanent link"></a></h1>
+<p>A Guide to installing, using and creating MkDocs Plugins</p>
+<hr />
+<h2 id="installing-plugins">Installing Plugins<a class="headerlink" href="#installing-plugins" title="Permanent link"></a></h2>
+<p>Before a plugin can be used, it must be installed on the system. If you are
+using a plugin which comes with MkDocs, then it was installed when you installed
+MkDocs. However, to install third party plugins, you need to determine the
+appropriate package name and install it using <code>pip</code>:</p>
+<pre><code>pip install mkdocs-foo-plugin
+</code></pre>
+<p>Once a plugin has been successfully installed, it is ready to use. It just needs
+to be <a href="#using-plugins">enabled</a> in the configuration file. The <a href="https://github.com/mkdocs/mkdocs/wiki/MkDocs-Plugins">MkDocs Plugins</a>
+wiki page has a growing list of plugins that you can install and use.</p>
+<h2 id="using-plugins">Using Plugins<a class="headerlink" href="#using-plugins" title="Permanent link"></a></h2>
+<p>The <a href="../../user-guide/configuration/#plugins"><code>plugins</code></a> configuration option should contain a list of plugins to
+use when building the site. Each "plugin" must be a string name assigned to the
+plugin (see the documentation for a given plugin to determine its "name"). A
+plugin listed here must already be <a href="#installing-plugins">installed</a>.</p>
+<pre><code class="language-yaml">plugins:
+    - search
+</code></pre>
+<p>Some plugins may provide configuration options of their own. If you would like
+to set any configuration options, then you can nest a key/value mapping
+(<code>option_name: option value</code>) of any options that a given plugin supports. Note
+that a colon (<code>:</code>) must follow the plugin name and then on a new line the option
+name and value must be indented and separated by a colon. If you would like to
+define multiple options for a single plugin, each option must be defined on a
+separate line.</p>
+<pre><code class="language-yaml">plugins:
+    - search:
+        lang: en
+        foo: bar
+</code></pre>
+<p>For information regarding the configuration options available for a given plugin,
+see that plugin's documentation.</p>
+<p>For a list of default plugins and how to override them, see the
+<a href="../../user-guide/configuration/#plugins">configuration</a> documentation.</p>
+<h2 id="developing-plugins">Developing Plugins<a class="headerlink" href="#developing-plugins" title="Permanent link"></a></h2>
+<p>Like MkDocs, plugins must be written in Python. It is generally expected that
+each plugin would be distributed as a separate Python module, although it is
+possible to define multiple plugins in the same module. At a minimum, a MkDocs
+Plugin must consist of a <a href="#baseplugin">BasePlugin</a> subclass and an <a href="#entry-point">entry point</a> which
+points to it.</p>
+<h3 id="baseplugin">BasePlugin<a class="headerlink" href="#baseplugin" title="Permanent link"></a></h3>
+<p>A subclass of <code>mkdocs.plugins.BasePlugin</code> should define the behavior of the plugin.
+The class generally consists of actions to perform on specific events in the build
+process as well as a configuration scheme for the plugin.</p>
+<p>All <code>BasePlugin</code> subclasses contain the following attributes:</p>
+<h4 id="config_scheme">config_scheme<a class="headerlink" href="#config_scheme" title="Permanent link"></a></h4>
+<dl>
+<dd>
+<p>A tuple of configuration validation instances. Each item must consist of a
+two item tuple in which the first item is the string name of the
+configuration option and the second item is an instance of
+<code>mkdocs.config.config_options.BaseConfigOption</code> or any of its subclasses.</p>
+<p>For example, the following <code>config_scheme</code> defines three configuration options: <code>foo</code>, which accepts a string; <code>bar</code>, which accepts an integer; and <code>baz</code>, which accepts a boolean value.</p>
+<pre><code>class MyPlugin(mkdocs.plugins.BasePlugin):
+    config_scheme = (
+        ('foo', mkdocs.config.config_options.Type(str, default='a default value')),
+        ('bar', mkdocs.config.config_options.Type(int, default=0)),
+        ('baz', mkdocs.config.config_options.Type(bool, default=True))
+    )
+</code></pre>
+<p>When the user's configuration is loaded, the above scheme will be used to
+validate the configuration and fill in any defaults for settings not
+provided by the user. The validation classes may be any of the classes
+provided in <code>mkdocs.config.config_options</code> or a third party subclass defined
+in the plugin.</p>
+<p>Any settings provided by the user which fail validation or are not defined
+in the <code>config_scheme</code> will raise a <code>mkdocs.config.base.ValidationError</code>.</p>
+</dd>
+</dl>
+<h4 id="config">config<a class="headerlink" href="#config" title="Permanent link"></a></h4>
+<dl>
+<dd>A dictionary of configuration options for the plugin, which is populated by
+the <code>load_config</code> method after configuration validation has completed. Use
+this attribute to access options provided by the user.<pre><code>def on_pre_build(self, config):
+    if self.config['bool_option']:
+        # implement "bool_option" functionality here...
+</code></pre>
+</dd>
+</dl>
+<p>All <code>BasePlugin</code> subclasses contain the following method(s):</p>
+<h4 id="load_configoptions">load_config(options)<a class="headerlink" href="#load_configoptions" title="Permanent link"></a></h4>
+<dl>
+<dd>Loads configuration from a dictionary of options. Returns a tuple of
+<code>(errors, warnings)</code>. This method is called by MkDocs during configuration
+validation and should not need to be called by the plugin.</dd>
+</dl>
+<h4 id="on_event_name">on_&lt;event_name&gt;()<a class="headerlink" href="#on_event_name" title="Permanent link"></a></h4>
+<dl>
+<dd>
+<p>Optional methods which define the behavior for specific <a href="#events">events</a>. The plugin
+should define its behavior within these methods. Replace <code>&lt;event_name&gt;</code> with
+the actual name of the event. For example, the <code>pre_build</code> event would be
+defined in the <code>on_pre_build</code> method.</p>
+<p>Most events accept one positional argument and various keyword arguments. It
+is generally expected that the positional argument would be modified (or
+replaced) by the plugin and returned. If nothing is returned (the method
+returns <code>None</code>), then the original, unmodified object is used. The keyword
+arguments are simply provided to give context and/or supply data which may
+be used to determine how the positional argument should be modified. It is
+good practice to accept keyword arguments as <code>**kwargs</code>. In the event that
+additional keywords are provided to an event in a future version of MkDocs,
+there will be no need to alter your plugin.</p>
+<p>For example, the following event would add an additional static_template to
+the theme config:</p>
+<pre><code>class MyPlugin(BasePlugin):
+    def on_config(self, config, **kwargs):
+        config['theme'].static_templates.add('my_template.html')
+        return config
+</code></pre>
+</dd>
+</dl>
+<h3 id="events">Events<a class="headerlink" href="#events" title="Permanent link"></a></h3>
+<p>There are three kinds of events: <a href="#global-events">Global Events</a>, <a href="#page-events">Page Events</a> and
+<a href="#template-events">Template Events</a>.</p>
+<h4 id="global-events">Global Events<a class="headerlink" href="#global-events" title="Permanent link"></a></h4>
+<p>Global events are called once per build at either the beginning or end of the
+build process. Any changes made in these events will have a global effect on the
+entire site.</p>
+<h5 id="on_serve">on_serve<a class="headerlink" href="#on_serve" title="Permanent link"></a></h5>
+<dl>
+<dd>
+<p>The <code>serve</code> event is only called when the <code>serve</code> command is used during
+development. It is passed the <code>Server</code> instance which can be modified before
+it is activated. For example, additional files or directories could be added
+to the list of "watched" files for auto-reloading.</p>
+<dl>
+<dt>Parameters:</dt>
+<dd><strong>server:</strong> <code>livereload.Server</code> instance</dd>
+<dd><strong>config:</strong> global configuration object</dd>
+<dd><strong>builder:</strong> a callable which gets passed to each call to <code>server.watch</code></dd>
+<dt>Returns:</dt>
+<dd><code>livereload.Server</code> instance</dd>
+</dl>
+</dd>
+</dl>
+<h5 id="on_config">on_config<a class="headerlink" href="#on_config" title="Permanent link"></a></h5>
+<dl>
+<dd>
+<p>The <code>config</code> event is the first event called on build and is run immediately
+after the user configuration is loaded and validated. Any alterations to the
+config should be made here.</p>
+<dl>
+<dt>Parameters:</dt>
+<dd><strong>config:</strong> global configuration object</dd>
+<dt>Returns:</dt>
+<dd>global configuration object</dd>
+</dl>
+</dd>
+</dl>
+<h5 id="on_pre_build">on_pre_build<a class="headerlink" href="#on_pre_build" title="Permanent link"></a></h5>
+<dl>
+<dd>
+<p>The <code>pre_build</code> event does not alter any variables. Use this event to call
+pre-build scripts.</p>
+<dl>
+<dt>Parameters:</dt>
+<dd><strong>config:</strong> global configuration object</dd>
+</dl>
+</dd>
+</dl>
+<h5 id="on_files">on_files<a class="headerlink" href="#on_files" title="Permanent link"></a></h5>
+<dl>
+<dd>
+<p>The <code>files</code> event is called after the files collection is populated from the
+<code>docs_dir</code>. Use this event to add, remove, or alter files in the
+collection. Note that Page objects have not yet been associated with the
+file objects in the collection. Use <a href="#page-events">Page Events</a> to manipulate page
+specific data.</p>
+<dl>
+<dt>Parameters:</dt>
+<dd><strong>files:</strong> global files collection</dd>
+<dd><strong>config:</strong> global configuration object</dd>
+<dt>Returns:</dt>
+<dd>global files collection</dd>
+</dl>
+</dd>
+</dl>
+<h5 id="on_nav">on_nav<a class="headerlink" href="#on_nav" title="Permanent link"></a></h5>
+<dl>
+<dd>
+<p>The <code>nav</code> event is called after the site navigation is created and can
+be used to alter the site navigation.</p>
+<dl>
+<dt>Parameters:</dt>
+<dd><strong>nav:</strong> global navigation object</dd>
+<dd><strong>config:</strong> global configuration object</dd>
+<dd><strong>files:</strong> global files collection</dd>
+<dt>Returns:</dt>
+<dd>global navigation object</dd>
+</dl>
+</dd>
+</dl>
+<h5 id="on_env">on_env<a class="headerlink" href="#on_env" title="Permanent link"></a></h5>
+<dl>
+<dd>
+<p>The <code>env</code> event is called after the Jinja template environment is created
+and can be used to alter the <a href="https://jinja.palletsprojects.com/en/latest/api/#jinja2.Environment">Jinja environment</a>.</p>
+<dl>
+<dt>Parameters:</dt>
+<dd><strong>env:</strong> global Jinja environment</dd>
+<dd><strong>config:</strong> global configuration object</dd>
+<dd><strong>files:</strong> global files collection</dd>
+<dt>Returns:</dt>
+<dd>global Jinja Environment</dd>
+</dl>
+</dd>
+</dl>
+<h5 id="on_post_build">on_post_build<a class="headerlink" href="#on_post_build" title="Permanent link"></a></h5>
+<dl>
+<dd>
+<p>The <code>post_build</code> event does not alter any variables. Use this event to call
+post-build scripts.</p>
+<dl>
+<dt>Parameters:</dt>
+<dd><strong>config:</strong> global configuration object</dd>
+</dl>
+</dd>
+</dl>
+<h5 id="on_build_error">on_build_error<a class="headerlink" href="#on_build_error" title="Permanent link"></a></h5>
+<dl>
+<dd>
+<p>The <code>build_error</code> event is called after an exception of any kind
+is caught by MkDocs during the build process.
+Use this event to clean things up before MkDocs terminates. Note that any other
+events which were scheduled to run after the error will have been skipped. See
+<a href="#handling-errors">Handling Errors</a> for more details.</p>
+<dl>
+<dt>Parameters:</dt>
+<dd><strong>error:</strong> exception raised</dd>
+</dl>
+</dd>
+</dl>
+<h4 id="template-events">Template Events<a class="headerlink" href="#template-events" title="Permanent link"></a></h4>
+<p>Template events are called once for each non-page template. Each template event
+will be called for each template defined in the <a href="../../user-guide/configuration/#extra_templates">extra_templates</a> config setting
+as well as any <a href="../../user-guide/configuration/#static_templates">static_templates</a> defined in the theme. All template events are
+called after the <a href="#on_env">env</a> event and before any <a href="#page-events">page events</a>.</p>
+<h5 id="on_pre_template">on_pre_template<a class="headerlink" href="#on_pre_template" title="Permanent link"></a></h5>
+<dl>
+<dd>
+<p>The <code>pre_template</code> event is called immediately after the subject template is
+loaded and can be used to alter the template.</p>
+<dl>
+<dt>Parameters:</dt>
+<dd><strong>template</strong>: a Jinja2 <a href="http://code.nabla.net/doc/jinja2/api/jinja2/environment/jinja2.environment.Template.html">Template</a> object</dd>
+<dd><strong>template_name</strong>: string filename of template</dd>
+<dd><strong>config:</strong> global configuration object</dd>
+<dt>Returns:</dt>
+<dd>a Jinja2 <a href="http://code.nabla.net/doc/jinja2/api/jinja2/environment/jinja2.environment.Template.html">Template</a> object</dd>
+</dl>
+</dd>
+</dl>
+<h5 id="on_template_context">on_template_context<a class="headerlink" href="#on_template_context" title="Permanent link"></a></h5>
+<dl>
+<dd>
+<p>The <code>template_context</code> event is called immediately after the context is created
+for the subject template and can be used to alter the context for that specific
+template only.</p>
+<dl>
+<dt>Parameters:</dt>
+<dd><strong>context</strong>: dict of template context variables</dd>
+<dd><strong>template_name</strong>: string filename of template</dd>
+<dd><strong>config:</strong> global configuration object</dd>
+<dt>Returns:</dt>
+<dd>dict of template context variables</dd>
+</dl>
+</dd>
+</dl>
+<h5 id="on_post_template">on_post_template<a class="headerlink" href="#on_post_template" title="Permanent link"></a></h5>
+<dl>
+<dd>
+<p>The <code>post_template</code> event is called after the template is rendered, but before
+it is written to disc and can be used to alter the output of the template.
+If an empty string is returned, the template is skipped and nothing is is
+written to disc.</p>
+<dl>
+<dt>Parameters:</dt>
+<dd><strong>output_content</strong>: output of rendered template as string</dd>
+<dd><strong>template_name</strong>: string filename of template</dd>
+<dd><strong>config:</strong> global configuration object</dd>
+<dt>Returns:</dt>
+<dd>output of rendered template as string</dd>
+</dl>
+</dd>
+</dl>
+<h4 id="page-events">Page Events<a class="headerlink" href="#page-events" title="Permanent link"></a></h4>
+<p>Page events are called once for each Markdown page included in the site. All
+page events are called after the <a href="#on_post_template">post_template</a> event and before the
+<a href="#on_post_build">post_build</a> event.</p>
+<h5 id="on_pre_page">on_pre_page<a class="headerlink" href="#on_pre_page" title="Permanent link"></a></h5>
+<dl>
+<dd>
+<p>The <code>pre_page</code> event is called before any actions are taken on the subject
+page and can be used to alter the <code>Page</code> instance.</p>
+<dl>
+<dt>Parameters:</dt>
+<dd><strong>page:</strong> <code>mkdocs.nav.Page</code> instance</dd>
+<dd><strong>config:</strong> global configuration object</dd>
+<dd><strong>files:</strong> global files collection</dd>
+<dt>Returns:</dt>
+<dd><code>mkdocs.nav.Page</code> instance</dd>
+</dl>
+</dd>
+</dl>
+<h5 id="on_page_read_source">on_page_read_source<a class="headerlink" href="#on_page_read_source" title="Permanent link"></a></h5>
+<dl>
+<dd>
+<p>The <code>on_page_read_source</code> event can replace the default mechanism to read
+the contents of a page's source from the filesystem.</p>
+<dl>
+<dt>Parameters:</dt>
+<dd><strong>page:</strong> <code>mkdocs.nav.Page</code> instance</dd>
+<dd><strong>config:</strong> global configuration object</dd>
+<dt>Returns:</dt>
+<dd>The raw source for a page as unicode string. If <code>None</code> is returned, the
+  default loading from a file will be performed.</dd>
+</dl>
+</dd>
+</dl>
+<h5 id="on_page_markdown">on_page_markdown<a class="headerlink" href="#on_page_markdown" title="Permanent link"></a></h5>
+<dl>
+<dd>
+<p>The <code>page_markdown</code> event is called after the page's markdown is loaded
+from file and can be used to alter the Markdown source text. The meta-
+data has been stripped off and is available as <code>page.meta</code> at this point.</p>
+<dl>
+<dt>Parameters:</dt>
+<dd><strong>markdown:</strong> Markdown source text of page as string</dd>
+<dd><strong>page:</strong> <code>mkdocs.nav.Page</code> instance</dd>
+<dd><strong>config:</strong> global configuration object</dd>
+<dd><strong>files:</strong> global files collection</dd>
+<dt>Returns:</dt>
+<dd>Markdown source text of page as string</dd>
+</dl>
+</dd>
+</dl>
+<h5 id="on_page_content">on_page_content<a class="headerlink" href="#on_page_content" title="Permanent link"></a></h5>
+<dl>
+<dd>
+<p>The <code>page_content</code> event is called after the Markdown text is rendered to
+HTML (but before being passed to a template) and can be used to alter the
+HTML body of the page.</p>
+<dl>
+<dt>Parameters:</dt>
+<dd><strong>html:</strong> HTML rendered from Markdown source as string</dd>
+<dd><strong>page:</strong> <code>mkdocs.nav.Page</code> instance</dd>
+<dd><strong>config:</strong> global configuration object</dd>
+<dd><strong>files:</strong> global files collection</dd>
+<dt>Returns:</dt>
+<dd>HTML rendered from Markdown source as string</dd>
+</dl>
+</dd>
+</dl>
+<h5 id="on_page_context">on_page_context<a class="headerlink" href="#on_page_context" title="Permanent link"></a></h5>
+<dl>
+<dd>
+<p>The <code>page_context</code> event is called after the context for a page is created
+and can be used to alter the context for that specific page only.</p>
+<dl>
+<dt>Parameters:</dt>
+<dd><strong>context</strong>: dict of template context variables</dd>
+<dd><strong>page:</strong> <code>mkdocs.nav.Page</code> instance</dd>
+<dd><strong>config:</strong> global configuration object</dd>
+<dd><strong>nav:</strong> global navigation object</dd>
+<dt>Returns:</dt>
+<dd>dict of template context variables</dd>
+</dl>
+</dd>
+</dl>
+<h5 id="on_post_page">on_post_page<a class="headerlink" href="#on_post_page" title="Permanent link"></a></h5>
+<dl>
+<dd>
+<p>The <code>post_page</code> event is called after the template is rendered, but
+before it is written to disc and can be used to alter the output of the
+page. If an empty string is returned, the page is skipped and nothing is
+written to disc.</p>
+<dl>
+<dt>Parameters:</dt>
+<dd><strong>output:</strong> output of rendered template as string</dd>
+<dd><strong>page:</strong> <code>mkdocs.nav.Page</code> instance</dd>
+<dd><strong>config:</strong> global configuration object</dd>
+<dt>Returns:</dt>
+<dd>output of rendered template as string</dd>
+</dl>
+</dd>
+</dl>
+<h3 id="handling-errors">Handling Errors<a class="headerlink" href="#handling-errors" title="Permanent link"></a></h3>
+<p>MkDocs defines four error types:</p>
+<h4 id="mkdocsexceptionsmkdocsexception"><code>mkdocs.exceptions.MkDocsException</code><a class="headerlink" href="#mkdocsexceptionsmkdocsexception" title="Permanent link"></a></h4>
+<dl>
+<dd>The base class which all MkDocs exceptions inherit from. This should
+not be raised directly. One of the subclasses should be raised instead.</dd>
+</dl>
+<h4 id="mkdocsexceptionsconfigurationerror"><code>mkdocs.exceptions.ConfigurationError</code><a class="headerlink" href="#mkdocsexceptionsconfigurationerror" title="Permanent link"></a></h4>
+<dl>
+<dd>This error is raised by configuration validation when a validation error
+is encountered. This error should be raised by any configuration options
+defined in a plugin's <a href="#config_scheme">config_scheme</a>.</dd>
+</dl>
+<h4 id="mkdocsexceptionsbuilderror"><code>mkdocs.exceptions.BuildError</code><a class="headerlink" href="#mkdocsexceptionsbuilderror" title="Permanent link"></a></h4>
+<dl>
+<dd>This error may be raised by MkDocs during the build process. Plugins should
+not raise this error.</dd>
+</dl>
+<h4 id="mkdocsexceptionspluginerror"><code>mkdocs.exceptions.PluginError</code><a class="headerlink" href="#mkdocsexceptionspluginerror" title="Permanent link"></a></h4>
+<dl>
+<dd>A subclass of <code>mkdocs.exceptions.BuildError</code> which can be raised by plugin
+events.</dd>
+</dl>
+<p>Unexpected and uncaught exceptions will interrupt the build process and produce
+typical Python tracebacks, which are useful for debugging your code. However,
+users generally find tracebacks overwhelming and often miss the helpful error
+message. Therefore, MkDocs will catch any of the errors listed above, retrieve
+the error message, and exit immediately with only the helpful message displayed
+to the user.</p>
+<p>Therefore, you might want to catch any exceptions within your plugin and raise a
+<code>PluginError</code>, passing in your own custom-crafted message, so that the build
+process is aborted with a helpful message.</p>
+<p>The <a href="#on_build_error">on_build_error</a> event will be triggered for any exception.</p>
+<p>For example:</p>
+<pre><code class="language-python">from mkdocs.exceptions import PluginError
+from mkdocs.plugins import BasePlugin
+
+
+class MyPlugin(BasePlugin):
+    def on_post_page(self, output, page, config, **kwargs):
+        try:
+            # some code that could throw a KeyError
+            ...
+        except KeyError as error:
+            raise PluginError(str(error))
+
+    def on_build_error(self, error):
+        # some code to clean things up
+        ...
+</code></pre>
+<h3 id="entry-point">Entry Point<a class="headerlink" href="#entry-point" title="Permanent link"></a></h3>
+<p>Plugins need to be packaged as Python libraries (distributed on PyPI separate
+from MkDocs) and each must register as a Plugin via a setuptools <code>entry_points</code>.
+Add the following to your <code>setup.py</code> script:</p>
+<pre><code class="language-python">entry_points={
+    'mkdocs.plugins': [
+        'pluginname = path.to.some_plugin:SomePluginClass',
+    ]
+}
+</code></pre>
+<p>The <code>pluginname</code> would be the name used by users (in the config file) and
+<code>path.to.some_plugin:SomePluginClass</code> would be the importable plugin itself
+(<code>from path.to.some_plugin import SomePluginClass</code>) where <code>SomePluginClass</code> is a
+subclass of <a href="#baseplugin">BasePlugin</a> which defines the plugin behavior. Naturally, multiple
+Plugin classes could exist in the same module. Simply define each as a separate
+entry point.</p>
+<pre><code class="language-python">entry_points={
+    'mkdocs.plugins': [
+        'featureA = path.to.my_plugins:PluginA',
+        'featureB = path.to.my_plugins:PluginB'
+    ]
+}
+</code></pre>
+<p>Note that registering a plugin does not activate it. The user still needs to
+tell MkDocs to use it via the config.</p>
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      版權所有 &copy; 2022 <a href="#">黑潮海洋文教基金會</a>，由 <a href="#">Netabox</a> 維護
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.22074ed6.min.js"}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.1514a9a0.min.js"></script>
+      
+    
+  </body>
+</html>
