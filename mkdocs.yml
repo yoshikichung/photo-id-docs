@@ -1,0 +1,58 @@
+site_name: Photo-ID Docs
+site_url: https://www.mkdocs.org/
+site_description: Photo-ID 說明文件
+site_author: Netabox
+
+repo_url: https://github.com/mkdocs/mkdocs/
+edit_uri: ""
+
+theme:
+    #name: mkdocs
+    #name: readthedocs
+    name: material
+    #locale: en
+    #analytics: {gtag: 'G-274394082'}
+    highlightjs: true
+    hljs_languages:
+        - yaml
+        - django
+
+nav:
+    - 首頁: index.md
+    - 入門: getting-started.md
+    - 使用手冊:
+        - 用戶指南: user-guide/index.md
+        - MkDocs 安裝: user-guide/installation.md
+        - 編寫您的文件: user-guide/writing-your-docs.md
+        - 選擇你的主題: user-guide/choosing-your-theme.md
+        - 自訂你的主題: user-guide/customizing-your-theme.md
+        - 本地化你的主題: user-guide/localizing-your-theme.md
+        - 配置: user-guide/configuration.md
+        - 部署你的文件: user-guide/deploying-your-docs.md
+    - 關於:
+        - Release Notes: about/release-notes.md
+        - Contributing: about/contributing.md
+        - License: about/license.md
+
+extra_css:
+    - css/extra.css
+
+markdown_extensions:
+    - toc:
+        permalink: 
+    - admonition
+    - attr_list
+    - def_list
+    #- mdx_gh_links:
+        #user: mkdocs
+        #repo: mkdocs
+
+copyright: 版權所有 &copy; 2022 <a href="#">黑潮海洋文教基金會</a>，由 <a href="#">Netabox</a> 維護
+
+plugins:
+    #- search
+    #- redirects:
+        #redirect_maps:
+            #user-guide/plugins.md: dev-guide/plugins.md
+            #user-guide/custom-themes.md: dev-guide/themes.md
+            #user-guide/styling-your-docs.md: user-guide/choosing-your-theme.md
