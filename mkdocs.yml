@@ -1,9 +1,9 @@
 site_name: Photo-ID Docs
-site_url: https://www.mkdocs.org/
+site_url: https://yoshikichung.github.io/photo-id-docs
 site_description: Photo-ID 說明文件
 site_author: Netabox
 
-repo_url: https://github.com/mkdocs/mkdocs/
+repo_url: https://github.com/yoshikichung/photo-id-docs
 edit_uri: ""
 
 theme:
