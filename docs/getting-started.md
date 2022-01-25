@@ -1,3 +1,7 @@
+---
+tags:
+  - markdown
+---
 # MkDocs 入門
 
 入門教程
@@ -59,8 +63,8 @@ site_url: https://example.com/
 
 ![The site_name setting](img/site-name.png)
 
-**注意**  
-> [`site_name`][site_name] 和 [`site_url`][site_url] 配置選項是配置文件中僅有的兩個必需選項。當您創建一個新專案時，該 `site_url`  選項被分配置換字串值 `https://example.com`。如果最終位置已知，您現在可以更改設置以指向它，或者您可以選擇暫時不理會它。只需確保在站點部署到生產伺服器之前對其進行編輯。
+!!! 注意
+    [`site_name`][site_name] 和 [`site_url`][site_url] 配置選項是配置文件中僅有的兩個必需選項。當您創建一個新專案時，該 `site_url`  選項被分配置換字串值 `https://example.com`。如果最終位置已知，您現在可以更改設置以指向它，或者您可以選擇暫時不理會它。只需確保在站點部署到生產伺服器之前對其進行編輯。
 
 ## 添加頁面
 
