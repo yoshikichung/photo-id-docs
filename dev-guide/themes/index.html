@@ -1,6 +1,6 @@
 
 <!doctype html>
-<html lang="en" class="no-js">
+<html lang="zh-Hant" class="no-js">
   <head>
     
       <meta charset="utf-8">
@@ -15,15 +15,15 @@
         <link rel="canonical" href="https://yoshikichung.github.io/photo-id-docs/dev-guide/themes/">
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.1.6">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.1.8">
     
     
       
-        <title>Developing Themes - Photo-ID Docs</title>
+        <title>主題 - Photo-ID Docs</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.cd566b2a.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.6e60f8b8.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.e6a45f82.min.css">
@@ -40,11 +40,16 @@
       
     
     
-      <link rel="stylesheet" href="../../css/extra.css">
-    
     <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
+  
+
+
+  
+  
+
+
 
     
     
@@ -53,12 +58,16 @@
   
     
     
+      
     
     
     
-    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="blue">
   
     
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -67,7 +76,7 @@
       
         
         <a href="#developing-themes" class="md-skip">
-          Skip to content
+          跳轉到
         </a>
       
     </div>
@@ -83,7 +92,12 @@
     <a href="../.." title="Photo-ID Docs" class="md-header__button md-logo" aria-label="Photo-ID Docs" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 89 89">
+  <path d="M3.136,17.387l0,42.932l42.932,21.467l-42.932,-64.399Z" />
+  <path d="M21.91,8l42.933,64.398l-18.775,9.388l-42.932,-64.399l18.774,-9.387Z" style="fill-opacity: 0.5" />
+  <path d="M67.535,17.387l-27.262,18.156l21.878,32.818l5.384,2.691l0,-53.665Z" />
+  <path d="M67.535,17.387l0,53.666l18.774,-9.388l0,-53.665l-18.774,9.387Z" style="fill-opacity: 0.25" />
+</svg>
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -99,13 +113,61 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Developing Themes
+              主題
             
           </span>
         </div>
       </div>
     </div>
     
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="blue"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="orange" data-md-color-accent="orange"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+      <div class="md-header__option">
+        <div class="md-select">
+          
+          <button class="md-header__button md-icon" aria-label="Select language">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.52 17.52 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04M18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12m-2.62 7 1.62-4.33L19.12 17h-3.24z"/></svg>
+          </button>
+          <div class="md-select__inner">
+            <ul class="md-select__list">
+              
+                <li class="md-select__item">
+                  <a href="/" hreflang="zh-TW" class="md-select__link">
+                    正體中文
+                  </a>
+                </li>
+                
+                <li class="md-select__item">
+                  <a href="/" hreflang="en" class="md-select__link">
+                    English
+                  </a>
+                </li>
+                
+            </ul>
+          </div>
+        </div>
+      </div>
     
     
       <label class="md-header__button md-icon" for="__search">
@@ -115,24 +177,30 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <input type="text" class="md-search__input" name="query" aria-label="搜尋" placeholder="搜尋" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
       </label>
       <nav class="md-search__options" aria-label="Search">
         
+          <a href="javascript:void(0)" class="md-search__icon md-icon" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08z"/></svg>
+          </a>
+        
         <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
         </button>
       </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
       
     </form>
     <div class="md-search__output">
       <div class="md-search__scrollwrap" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
-            Initializing search
+            正在初始化搜尋引擎
           </div>
           <ol class="md-search-result__list"></ol>
         </div>
@@ -143,13 +211,13 @@
     
     
       <div class="md-header__source">
-        <a href="https://github.com/yoshikichung/photo-id-docs" title="Go to repository" class="md-source" data-md-component="source">
+        <a href="https://github.com/yoshikichung/photo-id-docs" title="前往倉庫" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
   </div>
   <div class="md-source__repository">
-    GitHub
+    yoshikichung/photo-id-docs
   </div>
 </a>
       </div>
@@ -181,20 +249,25 @@
     <a href="../.." title="Photo-ID Docs" class="md-nav__button md-logo" aria-label="Photo-ID Docs" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 89 89">
+  <path d="M3.136,17.387l0,42.932l42.932,21.467l-42.932,-64.399Z" />
+  <path d="M21.91,8l42.933,64.398l-18.775,9.388l-42.932,-64.399l18.774,-9.387Z" style="fill-opacity: 0.5" />
+  <path d="M67.535,17.387l-27.262,18.156l21.878,32.818l5.384,2.691l0,-53.665Z" />
+  <path d="M67.535,17.387l0,53.666l18.774,-9.388l0,-53.665l-18.774,9.387Z" style="fill-opacity: 0.25" />
+</svg>
 
     </a>
     Photo-ID Docs
   </label>
   
     <div class="md-nav__source">
-      <a href="https://github.com/yoshikichung/photo-id-docs" title="Go to repository" class="md-source" data-md-component="source">
+      <a href="https://github.com/yoshikichung/photo-id-docs" title="前往倉庫" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
   </div>
   <div class="md-source__repository">
-    GitHub
+    yoshikichung/photo-id-docs
   </div>
 </a>
     </div>
@@ -246,11 +319,37 @@
       
       
       
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
       
-        <label class="md-nav__link" for="__nav_3">
-          使用手冊
-          <span class="md-nav__icon md-icon"></span>
-        </label>
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../user-guide/">使用手冊</a>
+          
+            <label for="__nav_3">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
       
       <nav class="md-nav" aria-label="使用手冊" data-md-level="1">
         <label class="md-nav__title" for="__nav_3">
@@ -260,18 +359,6 @@
         <ul class="md-nav__list" data-md-scrollfix>
           
             
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../user-guide/" class="md-nav__link">
-        用戶指南
-      </a>
-    </li>
-  
-
-            
           
             
               
@@ -280,7 +367,7 @@
   
     <li class="md-nav__item">
       <a href="../../user-guide/installation/" class="md-nav__link">
-        MkDocs 安裝
+        安裝
       </a>
     </li>
   
@@ -383,23 +470,786 @@
 
   
   
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../">開發手冊</a>
+          
+            <label for="__nav_4">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="開發手冊" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          開發手冊
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          主題
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        主題
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目錄">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目錄
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#creating-a-custom-theme" class="md-nav__link">
+    Creating a custom theme
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#basic-theme" class="md-nav__link">
+    Basic theme
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#theme-files" class="md-nav__link">
+    Theme Files
+  </a>
+  
+    <nav class="md-nav" aria-label="Theme Files">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#template-files" class="md-nav__link">
+    Template Files
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#theme-meta-files" class="md-nav__link">
+    Theme Meta Files
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dot-files" class="md-nav__link">
+    Dot Files
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#documentation-files" class="md-nav__link">
+    Documentation Files
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#template-variables" class="md-nav__link">
+    Template Variables
+  </a>
+  
+    <nav class="md-nav" aria-label="Template Variables">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#global-context" class="md-nav__link">
+    Global Context
+  </a>
+  
+    <nav class="md-nav" aria-label="Global Context">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#config" class="md-nav__link">
+    config
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nav" class="md-nav__link">
+    nav
+  </a>
+  
+    <nav class="md-nav" aria-label="nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#navhomepage" class="md-nav__link">
+    nav.homepage
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#navpages" class="md-nav__link">
+    nav.pages
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nav-example" class="md-nav__link">
+    Nav Example
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#base_url" class="md-nav__link">
+    base_url
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mkdocs_version" class="md-nav__link">
+    mkdocs_version
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#build_date_utc" class="md-nav__link">
+    build_date_utc
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pages" class="md-nav__link">
+    pages
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#page" class="md-nav__link">
+    page
+  </a>
+  
+    <nav class="md-nav" aria-label="page">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pagetitle" class="md-nav__link">
+    page.title
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pagecontent" class="md-nav__link">
+    page.content
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pagetoc" class="md-nav__link">
+    page.toc
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pagemeta" class="md-nav__link">
+    page.meta
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pageurl" class="md-nav__link">
+    page.url
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pageabs_url" class="md-nav__link">
+    page.abs_url
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pagecanonical_url" class="md-nav__link">
+    page.canonical_url
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pageedit_url" class="md-nav__link">
+    page.edit_url
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pageis_homepage" class="md-nav__link">
+    page.is_homepage
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pageprevious_page" class="md-nav__link">
+    page.previous_page
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pagenext_page" class="md-nav__link">
+    page.next_page
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pageparent" class="md-nav__link">
+    page.parent
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pagechildren" class="md-nav__link">
+    page.children
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pageactive" class="md-nav__link">
+    page.active
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pageis_section" class="md-nav__link">
+    page.is_section
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pageis_page" class="md-nav__link">
+    page.is_page
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pageis_link" class="md-nav__link">
+    page.is_link
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#navigation-objects" class="md-nav__link">
+    Navigation Objects
+  </a>
+  
+    <nav class="md-nav" aria-label="Navigation Objects">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#section" class="md-nav__link">
+    Section
+  </a>
+  
+    <nav class="md-nav" aria-label="Section">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sectiontitle" class="md-nav__link">
+    section.title
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sectionparent" class="md-nav__link">
+    section.parent
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sectionchildren" class="md-nav__link">
+    section.children
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sectionactive" class="md-nav__link">
+    section.active
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sectionis_section" class="md-nav__link">
+    section.is_section
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sectionis_page" class="md-nav__link">
+    section.is_page
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sectionis_link" class="md-nav__link">
+    section.is_link
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#link" class="md-nav__link">
+    Link
+  </a>
+  
+    <nav class="md-nav" aria-label="Link">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#linktitle" class="md-nav__link">
+    link.title
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linkurl" class="md-nav__link">
+    link.url
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linkparent" class="md-nav__link">
+    link.parent
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linkchildren" class="md-nav__link">
+    link.children
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linkactive" class="md-nav__link">
+    link.active
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linkis_section" class="md-nav__link">
+    link.is_section
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linkis_page" class="md-nav__link">
+    link.is_page
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linkis_link" class="md-nav__link">
+    link.is_link
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#extra-context" class="md-nav__link">
+    Extra Context
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#template-filters" class="md-nav__link">
+    Template Filters
+  </a>
+  
+    <nav class="md-nav" aria-label="Template Filters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#url" class="md-nav__link">
+    url
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tojson" class="md-nav__link">
+    tojson
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#search-and-themes" class="md-nav__link">
+    Search and themes
+  </a>
+  
+    <nav class="md-nav" aria-label="Search and themes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#include_search_page" class="md-nav__link">
+    include_search_page
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#search_index_only" class="md-nav__link">
+    search_index_only
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#packaging-themes" class="md-nav__link">
+    Packaging Themes
+  </a>
+  
+    <nav class="md-nav" aria-label="Packaging Themes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#package-layout" class="md-nav__link">
+    Package Layout
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#theme-configuration" class="md-nav__link">
+    Theme Configuration
+  </a>
+  
+    <nav class="md-nav" aria-label="Theme Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#locale" class="md-nav__link">
+    locale
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#static_templates" class="md-nav__link">
+    static_templates
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#extends" class="md-nav__link">
+    extends
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#distributing-themes" class="md-nav__link">
+    Distributing Themes
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#supporting-theme-localizationtranslation" class="md-nav__link">
+    Supporting theme Localization/Translation
+  </a>
+  
+    <nav class="md-nav" aria-label="Supporting theme Localization/Translation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#enabling-the-localizationtranslation-commands" class="md-nav__link">
+    Enabling the Localization/Translation commands
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-the-localizationtranslation-commands" class="md-nav__link">
+    Using the Localization/Translation commands
+  </a>
+  
+    <nav class="md-nav" aria-label="Using the Localization/Translation commands">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#compile_catalog" class="md-nav__link">
+    compile_catalog
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#extract_messages" class="md-nav__link">
+    extract_messages
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#init_catalog" class="md-nav__link">
+    init_catalog
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#update_catalog" class="md-nav__link">
+    update_catalog
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-custom-theme-localizationtranslation-workflow" class="md-nav__link">
+    Example custom theme Localization/Translation workflow
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#packaging-translations-with-your-theme" class="md-nav__link">
+    Packaging Translations with your theme
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../translations/" class="md-nav__link">
+        翻譯
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../plugins/" class="md-nav__link">
+        外掛套件
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
   
     
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
       
       
       
+        
+          
+        
+          
+        
+          
+        
       
-        <label class="md-nav__link" for="__nav_4">
+      
+        <label class="md-nav__link" for="__nav_5">
           關於
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="關於" data-md-level="1">
-        <label class="md-nav__title" for="__nav_4">
+        <label class="md-nav__title" for="__nav_5">
           <span class="md-nav__icon md-icon"></span>
           關於
         </label>
@@ -412,7 +1262,7 @@
   
     <li class="md-nav__item">
       <a href="../../about/release-notes/" class="md-nav__link">
-        Release Notes
+        版本注釋
       </a>
     </li>
   
@@ -426,7 +1276,7 @@
   
     <li class="md-nav__item">
       <a href="../../about/contributing/" class="md-nav__link">
-        Contributing
+        貢獻
       </a>
     </li>
   
@@ -440,7 +1290,7 @@
   
     <li class="md-nav__item">
       <a href="../../about/license/" class="md-nav__link">
-        License
+        授權
       </a>
     </li>
   
@@ -466,7 +1316,7 @@
                   <div class="md-sidebar__inner">
                     
 
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+<nav class="md-nav md-nav--secondary" aria-label="目錄">
   
   
   
@@ -475,7 +1325,7 @@
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      Table of contents
+      目錄
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
@@ -1115,7 +1965,7 @@
               
                 
 
-<h1 id="developing-themes">Developing Themes<a class="headerlink" href="#developing-themes" title="Permanent link"></a></h1>
+<h1 id="developing-themes">Developing Themes<a class="headerlink" href="#developing-themes" title="Permanent link">&para;</a></h1>
 <p>A guide to creating and distributing custom themes.</p>
 <hr />
 <div class="admonition note">
@@ -1129,27 +1979,27 @@ create one from scratch or you can download the <code>mkdocs-basic-theme</code> 
 basic, yet complete, theme with all the boilerplate required. <strong>You can find
 this base theme on <a href="https://github.com/mkdocs/mkdocs-basic-theme">GitHub</a></strong>. It contains detailed comments in
 the code to describe the different features and their usage.</p>
-<h2 id="creating-a-custom-theme">Creating a custom theme<a class="headerlink" href="#creating-a-custom-theme" title="Permanent link"></a></h2>
+<h2 id="creating-a-custom-theme">Creating a custom theme<a class="headerlink" href="#creating-a-custom-theme" title="Permanent link">&para;</a></h2>
 <p>The bare minimum required for a custom theme is a <code>main.html</code> <a href="http://jinja.pocoo.org/docs/dev/">Jinja2
 template</a> file which is placed in a directory that is <em>not</em> a child of the
 <a href="../../user-guide/configuration/#docs_dir">docs_dir</a>. Within <code>mkdocs.yml</code>, set the <a href="../../user-guide/configuration/#custom_dir"><code>theme.custom_dir</code></a>
 option to the path of the directory containing <code>main.html</code>. The path should be
 relative to the configuration file. For example, given this example project
 layout:</p>
-<pre><code class="language-no-highlight">mkdocs.yml
-docs/
-    index.md
-    about.md
-custom_theme/
-    main.html
-    ...
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>mkdocs.yml
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>docs/
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    index.md
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    about.md
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>custom_theme/
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    main.html
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    ...
+</code></pre></div>
 <p>... you would include the following settings in <code>mkdocs.yml</code> to use the custom theme
 directory:</p>
-<pre><code class="language-yaml">theme:
-    name: null
-    custom_dir: 'custom_theme/'
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nt">theme</span><span class="p">:</span><span class="w"></span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">null</span><span class="w"></span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="nt">custom_dir</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;custom_theme/&#39;</span><span class="w"></span>
+</code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Generally, when building your own custom theme, the theme.<a href="../../user-guide/configuration/#name">name</a>
@@ -1173,18 +2023,18 @@ be defined in the <a href="../../user-guide/configuration/#theme">theme</a> conf
 the <code>theme.name</code> configuration option, then a <code>mkdocs_theme.yml</code> file
 is required for the theme.</p>
 </div>
-<h2 id="basic-theme">Basic theme<a class="headerlink" href="#basic-theme" title="Permanent link"></a></h2>
+<h2 id="basic-theme">Basic theme<a class="headerlink" href="#basic-theme" title="Permanent link">&para;</a></h2>
 <p>The simplest <code>main.html</code> file is the following:</p>
-<pre><code class="language-django">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;title&gt;{% if page.title %}{{ page.title }} - {% endif %}{{ config.site_name }}&lt;/title&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    {{ page.content }}
-  &lt;/body&gt;
-&lt;/html&gt;
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="x">&lt;!DOCTYPE html&gt;</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="x">&lt;html&gt;</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="x">  &lt;head&gt;</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="x">    &lt;title&gt;</span><span class="cp">{%</span> <span class="k">if</span> <span class="nv">page.title</span> <span class="cp">%}{{</span> <span class="nv">page.title</span> <span class="cp">}}</span><span class="x"> - </span><span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}{{</span> <span class="nv">config.site_name</span> <span class="cp">}}</span><span class="x">&lt;/title&gt;</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="x">  &lt;/head&gt;</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="x">  &lt;body&gt;</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="x">    </span><span class="cp">{{</span> <span class="nv">page.content</span> <span class="cp">}}</span><span class="x"></span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="x">  &lt;/body&gt;</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="x">&lt;/html&gt;</span>
+</code></pre></div>
 <p>The body content from each page specified in <code>mkdocs.yml</code> is inserted using the
 <code>{{ page.content }}</code> tag. Style-sheets and scripts can be brought into this
 theme as with a normal HTML file. Navbars and tables of contents can also be
@@ -1203,43 +2053,43 @@ required, third party template authors are encouraged to follow a similar
 pattern and may want to define the same <a href="../../user-guide/customizing-your-theme/#overriding-template-blocks">blocks</a> as are used in the built-in
 themes for consistency.</p>
 </div>
-<h2 id="theme-files">Theme Files<a class="headerlink" href="#theme-files" title="Permanent link"></a></h2>
+<h2 id="theme-files">Theme Files<a class="headerlink" href="#theme-files" title="Permanent link">&para;</a></h2>
 <p>There are various files which a theme treats special in some way. Any other
 files are simply copied from the theme directory to the same path in the
 <code>site_dir</code> when the site it built. For example image and CSS files have no
 special significance and are copied as-is. Note, however, that if the user
 provides a file with the same path in their <code>docs_dir</code>, then the user's file
 will replace the theme file.</p>
-<h3 id="template-files">Template Files<a class="headerlink" href="#template-files" title="Permanent link"></a></h3>
+<h3 id="template-files">Template Files<a class="headerlink" href="#template-files" title="Permanent link">&para;</a></h3>
 <p>Any files with the <code>.html</code> extension are considered to be template files and are
 not copied from the theme directory or any subdirectories. Also, any files
 listed in <a href="#static_templates">static_templates</a> are treated as templates regardless of their file
 extension.</p>
-<h3 id="theme-meta-files">Theme Meta Files<a class="headerlink" href="#theme-meta-files" title="Permanent link"></a></h3>
+<h3 id="theme-meta-files">Theme Meta Files<a class="headerlink" href="#theme-meta-files" title="Permanent link">&para;</a></h3>
 <p>The various files required for packaging a theme are also ignored. Specifically,
 the <code>mkdocs_theme.yml</code> configuration file and any Python files.</p>
-<h3 id="dot-files">Dot Files<a class="headerlink" href="#dot-files" title="Permanent link"></a></h3>
+<h3 id="dot-files">Dot Files<a class="headerlink" href="#dot-files" title="Permanent link">&para;</a></h3>
 <p>Theme authors can explicitly force MkDocs to ignore files by starting a file or
 directory name with a dot. Any of the following files would be ignored:</p>
-<pre><code class="language-text">.ignored.txt
-.ignored/file.txt
-foo/.ignored.txt
-foo/.ignored/file.txt
-</code></pre>
-<h3 id="documentation-files">Documentation Files<a class="headerlink" href="#documentation-files" title="Permanent link"></a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>.ignored.txt
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>.ignored/file.txt
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>foo/.ignored.txt
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>foo/.ignored/file.txt
+</code></pre></div>
+<h3 id="documentation-files">Documentation Files<a class="headerlink" href="#documentation-files" title="Permanent link">&para;</a></h3>
 <p>All documentation files are ignored. Specifically, any Markdown files (using any
 of the file extensions supported by MKDocs). Additionally, any README files
 which may exist in the theme directories are ignored.</p>
-<h2 id="template-variables">Template Variables<a class="headerlink" href="#template-variables" title="Permanent link"></a></h2>
+<h2 id="template-variables">Template Variables<a class="headerlink" href="#template-variables" title="Permanent link">&para;</a></h2>
 <p>Each template in a theme is built with a template context. These are the
 variables that are available to themes. The context varies depending on the
 template that is being built. At the moment templates are either built with
 the global context or with a page specific context. The global context is used
 for HTML pages that don't represent an individual Markdown document, for
 example a 404.html page or search.html.</p>
-<h3 id="global-context">Global Context<a class="headerlink" href="#global-context" title="Permanent link"></a></h3>
+<h3 id="global-context">Global Context<a class="headerlink" href="#global-context" title="Permanent link">&para;</a></h3>
 <p>The following variables are available globally on any template.</p>
-<h4 id="config">config<a class="headerlink" href="#config" title="Permanent link"></a></h4>
+<h4 id="config">config<a class="headerlink" href="#config" title="Permanent link">&para;</a></h4>
 <p>The <code>config</code> variable is an instance of MkDocs' config object generated from the
 <code>mkdocs.yml</code> config file. While you can use any config option, some commonly
 used options include:</p>
@@ -1257,73 +2107,73 @@ used options include:</p>
 <li><a href="../../user-guide/configuration/#copyright">config.copyright</a></li>
 <li><a href="../../user-guide/configuration/#google_analytics">config.google_analytics</a></li>
 </ul>
-<h4 id="nav">nav<a class="headerlink" href="#nav" title="Permanent link"></a></h4>
+<h4 id="nav">nav<a class="headerlink" href="#nav" title="Permanent link">&para;</a></h4>
 <p>The <code>nav</code> variable is used to create the navigation for the documentation. The
 <code>nav</code> object is an iterable of <a href="#navigation-objects">navigation objects</a> as
 defined by the <a href="../../user-guide/configuration/#nav">nav</a> configuration setting.</p>
 <p>In addition to the iterable of <a href="#navigation-objects">navigation objects</a>, the
 <code>nav</code> object contains the following attributes:</p>
-<h5 id="navhomepage">nav.homepage<a class="headerlink" href="#navhomepage" title="Permanent link"></a></h5>
+<h5 id="navhomepage">nav.homepage<a class="headerlink" href="#navhomepage" title="Permanent link">&para;</a></h5>
 <p>The <a href="#page">page</a> object for the homepage of the site.</p>
-<h5 id="navpages">nav.pages<a class="headerlink" href="#navpages" title="Permanent link"></a></h5>
+<h5 id="navpages">nav.pages<a class="headerlink" href="#navpages" title="Permanent link">&para;</a></h5>
 <p>A flat list of all <a href="#page">page</a> objects contained in the navigation. This list
 is not necessarily a complete list of all site pages as it does not contain
 pages which are not included in the navigation. This list does match the list
 and order of pages used for all "next page" and "previous page" links. For a
 list of all pages, use the <a href="#pages">pages</a> template variable.</p>
-<h5 id="nav-example">Nav Example<a class="headerlink" href="#nav-example" title="Permanent link"></a></h5>
+<h5 id="nav-example">Nav Example<a class="headerlink" href="#nav-example" title="Permanent link">&para;</a></h5>
 <p>Following is a basic usage example which outputs the first and second level
 navigation as a nested list.</p>
-<pre><code class="language-django">{% if nav|length&gt;1 %}
-    &lt;ul&gt;
-    {% for nav_item in nav %}
-        {% if nav_item.children %}
-            &lt;li&gt;{{ nav_item.title }}
-                &lt;ul&gt;
-                {% for nav_item in nav_item.children %}
-                    &lt;li class=&quot;{% if nav_item.active%}current{% endif %}&quot;&gt;
-                        &lt;a href=&quot;{{ nav_item.url|url }}&quot;&gt;{{ nav_item.title }}&lt;/a&gt;
-                    &lt;/li&gt;
-                {% endfor %}
-                &lt;/ul&gt;
-            &lt;/li&gt;
-        {% else %}
-            &lt;li class=&quot;{% if nav_item.active%}current{% endif %}&quot;&gt;
-                &lt;a href=&quot;{{ nav_item.url|url }}&quot;&gt;{{ nav_item.title }}&lt;/a&gt;
-            &lt;/li&gt;
-        {% endif %}
-    {% endfor %}
-    &lt;/ul&gt;
-{% endif %}
-</code></pre>
-<h4 id="base_url">base_url<a class="headerlink" href="#base_url" title="Permanent link"></a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="cp">{%</span> <span class="k">if</span> <span class="nv">nav</span><span class="o">|</span><span class="nf">length</span><span class="o">&gt;</span><span class="m">1</span> <span class="cp">%}</span><span class="x"></span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="x">    &lt;ul&gt;</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="x">    </span><span class="cp">{%</span> <span class="k">for</span> <span class="nv">nav_item</span> <span class="k">in</span> <span class="nv">nav</span> <span class="cp">%}</span><span class="x"></span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="x">        </span><span class="cp">{%</span> <span class="k">if</span> <span class="nv">nav_item.children</span> <span class="cp">%}</span><span class="x"></span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="x">            &lt;li&gt;</span><span class="cp">{{</span> <span class="nv">nav_item.title</span> <span class="cp">}}</span><span class="x"></span>
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="x">                &lt;ul&gt;</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="x">                </span><span class="cp">{%</span> <span class="k">for</span> <span class="nv">nav_item</span> <span class="k">in</span> <span class="nv">nav_item.children</span> <span class="cp">%}</span><span class="x"></span>
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="x">                    &lt;li class=&quot;</span><span class="cp">{%</span> <span class="k">if</span> <span class="nv">nav_item.active</span><span class="cp">%}</span><span class="x">current</span><span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span><span class="x">&quot;&gt;</span>
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="x">                        &lt;a href=&quot;</span><span class="cp">{{</span> <span class="nv">nav_item.url</span><span class="o">|</span><span class="nf">url</span> <span class="cp">}}</span><span class="x">&quot;&gt;</span><span class="cp">{{</span> <span class="nv">nav_item.title</span> <span class="cp">}}</span><span class="x">&lt;/a&gt;</span>
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="x">                    &lt;/li&gt;</span>
+<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="x">                </span><span class="cp">{%</span> <span class="k">endfor</span> <span class="cp">%}</span><span class="x"></span>
+<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="x">                &lt;/ul&gt;</span>
+<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a><span class="x">            &lt;/li&gt;</span>
+<a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a><span class="x">        </span><span class="cp">{%</span> <span class="k">else</span> <span class="cp">%}</span><span class="x"></span>
+<a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a><span class="x">            &lt;li class=&quot;</span><span class="cp">{%</span> <span class="k">if</span> <span class="nv">nav_item.active</span><span class="cp">%}</span><span class="x">current</span><span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span><span class="x">&quot;&gt;</span>
+<a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a><span class="x">                &lt;a href=&quot;</span><span class="cp">{{</span> <span class="nv">nav_item.url</span><span class="o">|</span><span class="nf">url</span> <span class="cp">}}</span><span class="x">&quot;&gt;</span><span class="cp">{{</span> <span class="nv">nav_item.title</span> <span class="cp">}}</span><span class="x">&lt;/a&gt;</span>
+<a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a><span class="x">            &lt;/li&gt;</span>
+<a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a><span class="x">        </span><span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span><span class="x"></span>
+<a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a><span class="x">    </span><span class="cp">{%</span> <span class="k">endfor</span> <span class="cp">%}</span><span class="x"></span>
+<a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a><span class="x">    &lt;/ul&gt;</span>
+<a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a><span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span><span class="x"></span>
+</code></pre></div>
+<h4 id="base_url">base_url<a class="headerlink" href="#base_url" title="Permanent link">&para;</a></h4>
 <p>The <code>base_url</code> provides a relative path to the root of the MkDocs project. While
 this can be used directly by prepending it to a local relative URL, it is best
 to use the <a href="#url">url</a> template filter, which is smarter about how it applies
 <code>base_url</code>.</p>
-<h4 id="mkdocs_version">mkdocs_version<a class="headerlink" href="#mkdocs_version" title="Permanent link"></a></h4>
+<h4 id="mkdocs_version">mkdocs_version<a class="headerlink" href="#mkdocs_version" title="Permanent link">&para;</a></h4>
 <p>Contains the current MkDocs version.</p>
-<h4 id="build_date_utc">build_date_utc<a class="headerlink" href="#build_date_utc" title="Permanent link"></a></h4>
+<h4 id="build_date_utc">build_date_utc<a class="headerlink" href="#build_date_utc" title="Permanent link">&para;</a></h4>
 <p>A Python datetime object that represents the date and time the documentation
 was built in UTC. This is useful for showing how recently the documentation
 was updated.</p>
-<h4 id="pages">pages<a class="headerlink" href="#pages" title="Permanent link"></a></h4>
+<h4 id="pages">pages<a class="headerlink" href="#pages" title="Permanent link">&para;</a></h4>
 <p>A flat list of <code>File</code> objects for <em>all</em> pages in the project. This list can
 contain pages not included in the global <a href="#nav">navigation</a> and may not match
 the order of pages within that navigation. The <a href="#page">page</a> object for each
 <code>File</code> can be accessed from <code>file.page</code>.</p>
-<h4 id="page">page<a class="headerlink" href="#page" title="Permanent link"></a></h4>
+<h4 id="page">page<a class="headerlink" href="#page" title="Permanent link">&para;</a></h4>
 <p>In templates which are not rendered from a Markdown source file, the <code>page</code>
 variable is <code>None</code>. In templates which are rendered from a Markdown source file,
 the <code>page</code> variable contains a <code>page</code> object. The same <code>page</code> objects are used
 as <code>page</code> <a href="#navigation-objects">navigation objects</a> in the global
 <a href="#nav">navigation</a> and in the <a href="#pages">pages</a> template variable.</p>
 <p>All <code>page</code> objects contain the following attributes:</p>
-<h5 id="pagetitle">page.title<a class="headerlink" href="#pagetitle" title="Permanent link"></a></h5>
+<h5 id="pagetitle">page.title<a class="headerlink" href="#pagetitle" title="Permanent link">&para;</a></h5>
 <p>Contains the Title for the current page.</p>
-<h5 id="pagecontent">page.content<a class="headerlink" href="#pagecontent" title="Permanent link"></a></h5>
+<h5 id="pagecontent">page.content<a class="headerlink" href="#pagecontent" title="Permanent link">&para;</a></h5>
 <p>The rendered Markdown as HTML, this is the contents of the documentation.</p>
-<h5 id="pagetoc">page.toc<a class="headerlink" href="#pagetoc" title="Permanent link"></a></h5>
+<h5 id="pagetoc">page.toc<a class="headerlink" href="#pagetoc" title="Permanent link">&para;</a></h5>
 <p>An iterable object representing the Table of contents for a page. Each item in
 the <code>toc</code> is an <code>AnchorLink</code> which contains the following attributes:</p>
 <ul>
@@ -1334,41 +2184,41 @@ the <code>toc</code> is an <code>AnchorLink</code> which contains the following 
 </ul>
 <p>The following example would display the top two levels of the Table of Contents
 for a page.</p>
-<pre><code class="language-django">&lt;ul&gt;
-{% for toc_item in page.toc %}
-    &lt;li&gt;&lt;a href=&quot;{{ toc_item.url }}&quot;&gt;{{ toc_item.title }}&lt;/a&gt;&lt;/li&gt;
-    {% for toc_item in toc_item.children %}
-        &lt;li&gt;&lt;a href=&quot;{{ toc_item.url }}&quot;&gt;{{ toc_item.title }}&lt;/a&gt;&lt;/li&gt;
-    {% endfor %}
-{% endfor %}
-&lt;/ul&gt;
-</code></pre>
-<h5 id="pagemeta">page.meta<a class="headerlink" href="#pagemeta" title="Permanent link"></a></h5>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="x">&lt;ul&gt;</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="cp">{%</span> <span class="k">for</span> <span class="nv">toc_item</span> <span class="k">in</span> <span class="nv">page.toc</span> <span class="cp">%}</span><span class="x"></span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="x">    &lt;li&gt;&lt;a href=&quot;</span><span class="cp">{{</span> <span class="nv">toc_item.url</span> <span class="cp">}}</span><span class="x">&quot;&gt;</span><span class="cp">{{</span> <span class="nv">toc_item.title</span> <span class="cp">}}</span><span class="x">&lt;/a&gt;&lt;/li&gt;</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="x">    </span><span class="cp">{%</span> <span class="k">for</span> <span class="nv">toc_item</span> <span class="k">in</span> <span class="nv">toc_item.children</span> <span class="cp">%}</span><span class="x"></span>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="x">        &lt;li&gt;&lt;a href=&quot;</span><span class="cp">{{</span> <span class="nv">toc_item.url</span> <span class="cp">}}</span><span class="x">&quot;&gt;</span><span class="cp">{{</span> <span class="nv">toc_item.title</span> <span class="cp">}}</span><span class="x">&lt;/a&gt;&lt;/li&gt;</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="x">    </span><span class="cp">{%</span> <span class="k">endfor</span> <span class="cp">%}</span><span class="x"></span>
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="cp">{%</span> <span class="k">endfor</span> <span class="cp">%}</span><span class="x"></span>
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="x">&lt;/ul&gt;</span>
+</code></pre></div>
+<h5 id="pagemeta">page.meta<a class="headerlink" href="#pagemeta" title="Permanent link">&para;</a></h5>
 <p>A mapping of the metadata included at the top of the markdown page. In this
 example we define a <code>source</code> property above the page title.</p>
-<pre><code class="language-no-highlight">source: generics.py
-        mixins.py
-
-# Page title
-
-Content...
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>source: generics.py
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>        mixins.py
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a># Page title
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>Content...
+</code></pre></div>
 <p>A template can access this metadata for the page with the <code>meta.source</code>
 variable. This could then be used to link to source files related to the
 documentation page.</p>
-<pre><code class="language-django">{% for filename in page.meta.source %}
-  &lt;a class=&quot;github&quot; href=&quot;https://github.com/.../{{ filename }}&quot;&gt;
-    &lt;span class=&quot;label label-info&quot;&gt;{{ filename }}&lt;/span&gt;
-  &lt;/a&gt;
-{% endfor %}
-</code></pre>
-<h5 id="pageurl">page.url<a class="headerlink" href="#pageurl" title="Permanent link"></a></h5>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="cp">{%</span> <span class="k">for</span> <span class="nv">filename</span> <span class="k">in</span> <span class="nv">page.meta.source</span> <span class="cp">%}</span><span class="x"></span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="x">  &lt;a class=&quot;github&quot; href=&quot;https://github.com/.../</span><span class="cp">{{</span> <span class="nv">filename</span> <span class="cp">}}</span><span class="x">&quot;&gt;</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="x">    &lt;span class=&quot;label label-info&quot;&gt;</span><span class="cp">{{</span> <span class="nv">filename</span> <span class="cp">}}</span><span class="x">&lt;/span&gt;</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="x">  &lt;/a&gt;</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="cp">{%</span> <span class="k">endfor</span> <span class="cp">%}</span><span class="x"></span>
+</code></pre></div>
+<h5 id="pageurl">page.url<a class="headerlink" href="#pageurl" title="Permanent link">&para;</a></h5>
 <p>The URL of the page relative to the MkDocs <code>site_dir</code>. It is expected that this
 be used with the <a href="#url">url</a> filter to ensure the URL is relative to the current
 page.</p>
-<pre><code class="language-django">&lt;a href=&quot;{{ page.url|url }}&quot;&gt;{{ page.title }}&lt;/a&gt;
-</code></pre>
-<h5 id="pageabs_url">page.abs_url<a class="headerlink" href="#pageabs_url" title="Permanent link"></a></h5>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="x">&lt;a href=&quot;</span><span class="cp">{{</span> <span class="nv">page.url</span><span class="o">|</span><span class="nf">url</span> <span class="cp">}}</span><span class="x">&quot;&gt;</span><span class="cp">{{</span> <span class="nv">page.title</span> <span class="cp">}}</span><span class="x">&lt;/a&gt;</span>
+</code></pre></div>
+<h5 id="pageabs_url">page.abs_url<a class="headerlink" href="#pageabs_url" title="Permanent link">&para;</a></h5>
 <p>The absolute URL of the page from the server root as determined by the value
 assigned to the <a href="../../user-guide/configuration/#site_url">site_url</a> configuration setting. The value includes any
 subdirectory included in the <code>site_url</code>, but not the domain. <a href="#base_url">base_url</a> should
@@ -1377,50 +2227,50 @@ not be used with this variable.</p>
 <code>page.abs_url</code> for the page <code>foo.md</code> would be <code>/foo/</code>. However, if
 <code>site_url: https://example.com/bar/</code>, then the value of <code>page.abs_url</code> for the
 page <code>foo.md</code> would be <code>/bar/foo/</code>.</p>
-<h5 id="pagecanonical_url">page.canonical_url<a class="headerlink" href="#pagecanonical_url" title="Permanent link"></a></h5>
+<h5 id="pagecanonical_url">page.canonical_url<a class="headerlink" href="#pagecanonical_url" title="Permanent link">&para;</a></h5>
 <p>The full, canonical URL to the current page as determined by the value assigned
 to the <a href="../../user-guide/configuration/#site_url">site_url</a> configuration setting. The value includes the domain and any
 subdirectory included in the <code>site_url</code>. <a href="#base_url">base_url</a> should not be used with this
 variable.</p>
-<h5 id="pageedit_url">page.edit_url<a class="headerlink" href="#pageedit_url" title="Permanent link"></a></h5>
+<h5 id="pageedit_url">page.edit_url<a class="headerlink" href="#pageedit_url" title="Permanent link">&para;</a></h5>
 <p>The full URL to the source page in the source repository. Typically used to
 provide a link to edit the source page. <a href="#base_url">base_url</a> should not be used with this
 variable.</p>
-<h5 id="pageis_homepage">page.is_homepage<a class="headerlink" href="#pageis_homepage" title="Permanent link"></a></h5>
+<h5 id="pageis_homepage">page.is_homepage<a class="headerlink" href="#pageis_homepage" title="Permanent link">&para;</a></h5>
 <p>Evaluates to <code>True</code> for the homepage of the site and <code>False</code> for all other
 pages. This can be used in conjunction with other attributes of the <code>page</code>
 object to alter the behavior. For example, to display a different title
 on the homepage:</p>
-<pre><code class="language-django">{% if not page.is_homepage %}{{ page.title }} - {% endif %}{{ site_name }}
-</code></pre>
-<h5 id="pageprevious_page">page.previous_page<a class="headerlink" href="#pageprevious_page" title="Permanent link"></a></h5>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="cp">{%</span> <span class="k">if</span> <span class="k">not</span> <span class="nv">page.is_homepage</span> <span class="cp">%}{{</span> <span class="nv">page.title</span> <span class="cp">}}</span><span class="x"> - </span><span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}{{</span> <span class="nv">site_name</span> <span class="cp">}}</span><span class="x"></span>
+</code></pre></div>
+<h5 id="pageprevious_page">page.previous_page<a class="headerlink" href="#pageprevious_page" title="Permanent link">&para;</a></h5>
 <p>The page object for the previous page or <code>None</code>. The value will be <code>None</code> if the
 current page is the first item in the site navigation or if the current page is
 not included in the navigation at all. When the value is a page object, the
 usage is the same as for <code>page</code>.</p>
-<h5 id="pagenext_page">page.next_page<a class="headerlink" href="#pagenext_page" title="Permanent link"></a></h5>
+<h5 id="pagenext_page">page.next_page<a class="headerlink" href="#pagenext_page" title="Permanent link">&para;</a></h5>
 <p>The page object for the next page or <code>None</code>. The value will be <code>None</code> if the
 current page is the last item in the site navigation or if the current page is
 not included in the navigation at all. When the value is a page object, the
 usage is the same as for <code>page</code>.</p>
-<h5 id="pageparent">page.parent<a class="headerlink" href="#pageparent" title="Permanent link"></a></h5>
+<h5 id="pageparent">page.parent<a class="headerlink" href="#pageparent" title="Permanent link">&para;</a></h5>
 <p>The immediate parent of the page in the <a href="#nav">site navigation</a>. <code>None</code> if the
 page is at the top level.</p>
-<h5 id="pagechildren">page.children<a class="headerlink" href="#pagechildren" title="Permanent link"></a></h5>
+<h5 id="pagechildren">page.children<a class="headerlink" href="#pagechildren" title="Permanent link">&para;</a></h5>
 <p>Pages do not contain children and the attribute is always <code>None</code>.</p>
-<h5 id="pageactive">page.active<a class="headerlink" href="#pageactive" title="Permanent link"></a></h5>
+<h5 id="pageactive">page.active<a class="headerlink" href="#pageactive" title="Permanent link">&para;</a></h5>
 <p>When <code>True</code>, indicates that this page is the currently viewed page. Defaults
 to <code>False</code>.</p>
-<h5 id="pageis_section">page.is_section<a class="headerlink" href="#pageis_section" title="Permanent link"></a></h5>
+<h5 id="pageis_section">page.is_section<a class="headerlink" href="#pageis_section" title="Permanent link">&para;</a></h5>
 <p>Indicates that the navigation object is a "section" object. Always <code>False</code> for
 page objects.</p>
-<h5 id="pageis_page">page.is_page<a class="headerlink" href="#pageis_page" title="Permanent link"></a></h5>
+<h5 id="pageis_page">page.is_page<a class="headerlink" href="#pageis_page" title="Permanent link">&para;</a></h5>
 <p>Indicates that the navigation object is a "page" object. Always <code>True</code> for
 page objects.</p>
-<h5 id="pageis_link">page.is_link<a class="headerlink" href="#pageis_link" title="Permanent link"></a></h5>
+<h5 id="pageis_link">page.is_link<a class="headerlink" href="#pageis_link" title="Permanent link">&para;</a></h5>
 <p>Indicates that the navigation object is a "link" object. Always <code>False</code> for
 page objects.</p>
-<h3 id="navigation-objects">Navigation Objects<a class="headerlink" href="#navigation-objects" title="Permanent link"></a></h3>
+<h3 id="navigation-objects">Navigation Objects<a class="headerlink" href="#navigation-objects" title="Permanent link">&para;</a></h3>
 <p>Navigation objects contained in the <a href="#nav">nav</a> template variable may be one of
 <a href="#section">section</a> objects, <a href="#page">page</a> objects, and <a href="#link">link</a> objects.
 While section objects may contain nested navigation objects, pages and links do
@@ -1428,109 +2278,109 @@ not.</p>
 <p>Page objects are the full page object as used for the current <a href="#page">page</a> with
 all of the same attributes available. Section and Link objects contain a subset
 of those attributes as defined below:</p>
-<h4 id="section">Section<a class="headerlink" href="#section" title="Permanent link"></a></h4>
+<h4 id="section">Section<a class="headerlink" href="#section" title="Permanent link">&para;</a></h4>
 <p>A <code>section</code> navigation object defines a named section in the navigation and
 contains a list of child navigation objects. Note that sections do not contain
 URLs and are not links of any kind. However, by default, MkDocs sorts index
 pages to the top and the first child might be used as the URL for a section if a
 theme chooses to do so.</p>
 <p>The following attributes are available on <code>section</code> objects:</p>
-<h5 id="sectiontitle">section.title<a class="headerlink" href="#sectiontitle" title="Permanent link"></a></h5>
+<h5 id="sectiontitle">section.title<a class="headerlink" href="#sectiontitle" title="Permanent link">&para;</a></h5>
 <p>The title of the section.</p>
-<h5 id="sectionparent">section.parent<a class="headerlink" href="#sectionparent" title="Permanent link"></a></h5>
+<h5 id="sectionparent">section.parent<a class="headerlink" href="#sectionparent" title="Permanent link">&para;</a></h5>
 <p>The immediate parent of the section or <code>None</code> if the section is at the top
 level.</p>
-<h5 id="sectionchildren">section.children<a class="headerlink" href="#sectionchildren" title="Permanent link"></a></h5>
+<h5 id="sectionchildren">section.children<a class="headerlink" href="#sectionchildren" title="Permanent link">&para;</a></h5>
 <p>An iterable of all child navigation objects. Children may include nested
 sections, pages and links.</p>
-<h5 id="sectionactive">section.active<a class="headerlink" href="#sectionactive" title="Permanent link"></a></h5>
+<h5 id="sectionactive">section.active<a class="headerlink" href="#sectionactive" title="Permanent link">&para;</a></h5>
 <p>When <code>True</code>, indicates that a child page of this section is the current page and
 can be used to highlight the section as the currently viewed section. Defaults
 to <code>False</code>.</p>
-<h5 id="sectionis_section">section.is_section<a class="headerlink" href="#sectionis_section" title="Permanent link"></a></h5>
+<h5 id="sectionis_section">section.is_section<a class="headerlink" href="#sectionis_section" title="Permanent link">&para;</a></h5>
 <p>Indicates that the navigation object is a "section" object. Always <code>True</code> for
 section objects.</p>
-<h5 id="sectionis_page">section.is_page<a class="headerlink" href="#sectionis_page" title="Permanent link"></a></h5>
+<h5 id="sectionis_page">section.is_page<a class="headerlink" href="#sectionis_page" title="Permanent link">&para;</a></h5>
 <p>Indicates that the navigation object is a "page" object. Always <code>False</code> for
 section objects.</p>
-<h5 id="sectionis_link">section.is_link<a class="headerlink" href="#sectionis_link" title="Permanent link"></a></h5>
+<h5 id="sectionis_link">section.is_link<a class="headerlink" href="#sectionis_link" title="Permanent link">&para;</a></h5>
 <p>Indicates that the navigation object is a "link" object. Always <code>False</code> for
 section objects.</p>
-<h4 id="link">Link<a class="headerlink" href="#link" title="Permanent link"></a></h4>
+<h4 id="link">Link<a class="headerlink" href="#link" title="Permanent link">&para;</a></h4>
 <p>A <code>link</code> navigation object contains a link which does not point to an internal
 MkDocs page. The following attributes are available on <code>link</code> objects:</p>
-<h5 id="linktitle">link.title<a class="headerlink" href="#linktitle" title="Permanent link"></a></h5>
+<h5 id="linktitle">link.title<a class="headerlink" href="#linktitle" title="Permanent link">&para;</a></h5>
 <p>The title of the link. This would generally be used as the label of the link.</p>
-<h5 id="linkurl">link.url<a class="headerlink" href="#linkurl" title="Permanent link"></a></h5>
+<h5 id="linkurl">link.url<a class="headerlink" href="#linkurl" title="Permanent link">&para;</a></h5>
 <p>The URL that the link points to. The URL should always be an absolute URLs and
 should not need to have <code>base_url</code> prepended.</p>
-<h5 id="linkparent">link.parent<a class="headerlink" href="#linkparent" title="Permanent link"></a></h5>
+<h5 id="linkparent">link.parent<a class="headerlink" href="#linkparent" title="Permanent link">&para;</a></h5>
 <p>The immediate parent of the link. <code>None</code> if the link is at the top level.</p>
-<h5 id="linkchildren">link.children<a class="headerlink" href="#linkchildren" title="Permanent link"></a></h5>
+<h5 id="linkchildren">link.children<a class="headerlink" href="#linkchildren" title="Permanent link">&para;</a></h5>
 <p>Links do not contain children and the attribute is always <code>None</code>.</p>
-<h5 id="linkactive">link.active<a class="headerlink" href="#linkactive" title="Permanent link"></a></h5>
+<h5 id="linkactive">link.active<a class="headerlink" href="#linkactive" title="Permanent link">&para;</a></h5>
 <p>External links cannot be "active" and the attribute is always <code>False</code>.</p>
-<h5 id="linkis_section">link.is_section<a class="headerlink" href="#linkis_section" title="Permanent link"></a></h5>
+<h5 id="linkis_section">link.is_section<a class="headerlink" href="#linkis_section" title="Permanent link">&para;</a></h5>
 <p>Indicates that the navigation object is a "section" object. Always <code>False</code> for
 link objects.</p>
-<h5 id="linkis_page">link.is_page<a class="headerlink" href="#linkis_page" title="Permanent link"></a></h5>
+<h5 id="linkis_page">link.is_page<a class="headerlink" href="#linkis_page" title="Permanent link">&para;</a></h5>
 <p>Indicates that the navigation object is a "page" object. Always <code>False</code> for
 link objects.</p>
-<h5 id="linkis_link">link.is_link<a class="headerlink" href="#linkis_link" title="Permanent link"></a></h5>
+<h5 id="linkis_link">link.is_link<a class="headerlink" href="#linkis_link" title="Permanent link">&para;</a></h5>
 <p>Indicates that the navigation object is a "link" object. Always <code>True</code> for
 link objects.</p>
-<h3 id="extra-context">Extra Context<a class="headerlink" href="#extra-context" title="Permanent link"></a></h3>
+<h3 id="extra-context">Extra Context<a class="headerlink" href="#extra-context" title="Permanent link">&para;</a></h3>
 <p>Additional variables can be passed to the template with the
 <a href="../../user-guide/configuration/#extra"><code>extra</code></a> configuration option. This is a
 set of key value pairs that can make custom templates far more flexible.</p>
 <p>For example, this could be used to include the project version of all pages
 and a list of links related to the project. This can be achieved with the
 following <code>extra</code> configuration:</p>
-<pre><code class="language-yaml">extra:
-    version: 0.13.0
-    links:
-        - https://github.com/mkdocs
-        - https://docs.readthedocs.org/en/latest/builds.html#mkdocs
-        - https://www.mkdocs.org/
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="nt">extra</span><span class="p">:</span><span class="w"></span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="w">    </span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0.13.0</span><span class="w"></span>
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="w">    </span><span class="nt">links</span><span class="p">:</span><span class="w"></span>
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://github.com/mkdocs</span><span class="w"></span>
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://docs.readthedocs.org/en/latest/builds.html#mkdocs</span><span class="w"></span>
+<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://www.mkdocs.org/</span><span class="w"></span>
+</code></pre></div>
 <p>And then displayed with this HTML in the custom theme.</p>
-<pre><code class="language-django">{{ config.extra.version }}
-
-{% if config.extra.links %}
-  &lt;ul&gt;
-  {% for link in config.extra.links %}
-      &lt;li&gt;{{ link }}&lt;/li&gt;
-  {% endfor %}
-  &lt;/ul&gt;
-{% endif %}
-</code></pre>
-<h2 id="template-filters">Template Filters<a class="headerlink" href="#template-filters" title="Permanent link"></a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="cp">{{</span> <span class="nv">config.extra.version</span> <span class="cp">}}</span><span class="x"></span>
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="cp">{%</span> <span class="k">if</span> <span class="nv">config.extra.links</span> <span class="cp">%}</span><span class="x"></span>
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="x">  &lt;ul&gt;</span>
+<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="x">  </span><span class="cp">{%</span> <span class="k">for</span> <span class="nv">link</span> <span class="k">in</span> <span class="nv">config.extra.links</span> <span class="cp">%}</span><span class="x"></span>
+<a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="x">      &lt;li&gt;</span><span class="cp">{{</span> <span class="nv">link</span> <span class="cp">}}</span><span class="x">&lt;/li&gt;</span>
+<a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a><span class="x">  </span><span class="cp">{%</span> <span class="k">endfor</span> <span class="cp">%}</span><span class="x"></span>
+<a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a><span class="x">  &lt;/ul&gt;</span>
+<a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a><span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span><span class="x"></span>
+</code></pre></div>
+<h2 id="template-filters">Template Filters<a class="headerlink" href="#template-filters" title="Permanent link">&para;</a></h2>
 <p>In addition to <a href="https://jinja.palletsprojects.com/en/latest/templates/#builtin-filters">Jinja's default filters</a>, the following custom filters are
 available to use in MkDocs templates:</p>
-<h3 id="url">url<a class="headerlink" href="#url" title="Permanent link"></a></h3>
+<h3 id="url">url<a class="headerlink" href="#url" title="Permanent link">&para;</a></h3>
 <p>Normalizes a URL. Absolute URLs are passed through unaltered. If the URL is
 relative and the template context includes a page object, then the URL is
 returned relative to the page object. Otherwise, the URL is returned with
 <a href="#base_url">base_url</a> prepended.</p>
-<pre><code class="language-django">&lt;a href=&quot;{{ page.url|url }}&quot;&gt;{{ page.title }}&lt;/a&gt;
-</code></pre>
-<h3 id="tojson">tojson<a class="headerlink" href="#tojson" title="Permanent link"></a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="x">&lt;a href=&quot;</span><span class="cp">{{</span> <span class="nv">page.url</span><span class="o">|</span><span class="nf">url</span> <span class="cp">}}</span><span class="x">&quot;&gt;</span><span class="cp">{{</span> <span class="nv">page.title</span> <span class="cp">}}</span><span class="x">&lt;/a&gt;</span>
+</code></pre></div>
+<h3 id="tojson">tojson<a class="headerlink" href="#tojson" title="Permanent link">&para;</a></h3>
 <p>Safety convert a Python object to a value in a JavaScript script.</p>
-<pre><code class="language-django">&lt;script&gt;
-    var mkdocs_page_name = {{ page.title|tojson|safe }};
-&lt;/script&gt;
-</code></pre>
-<h2 id="search-and-themes">Search and themes<a class="headerlink" href="#search-and-themes" title="Permanent link"></a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="x">&lt;script&gt;</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="x">    var mkdocs_page_name = </span><span class="cp">{{</span> <span class="nv">page.title</span><span class="o">|</span><span class="nf">tojson</span><span class="o">|</span><span class="nf">safe</span> <span class="cp">}}</span><span class="x">;</span>
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="x">&lt;/script&gt;</span>
+</code></pre></div>
+<h2 id="search-and-themes">Search and themes<a class="headerlink" href="#search-and-themes" title="Permanent link">&para;</a></h2>
 <p>As of MkDocs version <em>0.17</em> client side search support has been added to MkDocs
 via the <code>search</code> plugin. A theme needs to provide a few things for the plugin to
 work with the theme.</p>
 <p>While the <code>search</code> plugin is activated by default, users can disable the plugin
 and themes should account for this. It is recommended that theme templates wrap
 search specific markup with a check for the plugin:</p>
-<pre><code class="language-django">{% if 'search' in config['plugins'] %}
-    search stuff here...
-{% endif %}
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="cp">{%</span> <span class="k">if</span> <span class="s1">&#39;search&#39;</span> <span class="k">in</span> <span class="nv">config</span><span class="o">[</span><span class="s1">&#39;plugins&#39;</span><span class="o">]</span> <span class="cp">%}</span><span class="x"></span>
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="x">    search stuff here...</span>
+<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span><span class="x"></span>
+</code></pre></div>
 <p>At its most basic functionality, the search plugin will simply provide an index
 file which is no more than a JSON file containing the content of all pages.
 The theme would need to implement its own search functionality client-side.
@@ -1539,27 +2389,27 @@ a complete functioning client-side search tool based on <a href="https://lunrjs.
 <p>The following HTML needs to be added to the theme so that the provided
 JavaScript is able to properly load the search scripts and make relative links
 to the search results from the current page.</p>
-<pre><code class="language-django">&lt;script&gt;var base_url = '{{ base_url }}';&lt;/script&gt;
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="x">&lt;script&gt;var base_url = &#39;</span><span class="cp">{{</span> <span class="nv">base_url</span> <span class="cp">}}</span><span class="x">&#39;;&lt;/script&gt;</span>
+</code></pre></div>
 <p>With properly configured settings, the following HTML in a template  will add a
 full search implementation to your theme.</p>
-<pre><code class="language-django">&lt;h1 id=&quot;search&quot;&gt;Search Results&lt;/h1&gt;
-
-&lt;form action=&quot;search.html&quot;&gt;
-  &lt;input name=&quot;q&quot; id=&quot;mkdocs-search-query&quot; type=&quot;text&quot; &gt;
-&lt;/form&gt;
-
-&lt;div id=&quot;mkdocs-search-results&quot;&gt;
-  Sorry, page not found.
-&lt;/div&gt;
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="x">&lt;h1 id=&quot;search&quot;&gt;Search Results&lt;/h1&gt;</span>
+<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>
+<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a><span class="x">&lt;form action=&quot;search.html&quot;&gt;</span>
+<a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a><span class="x">  &lt;input name=&quot;q&quot; id=&quot;mkdocs-search-query&quot; type=&quot;text&quot; &gt;</span>
+<a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a><span class="x">&lt;/form&gt;</span>
+<a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a>
+<a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a><span class="x">&lt;div id=&quot;mkdocs-search-results&quot;&gt;</span>
+<a id="__codelineno-16-8" name="__codelineno-16-8" href="#__codelineno-16-8"></a><span class="x">  Sorry, page not found.</span>
+<a id="__codelineno-16-9" name="__codelineno-16-9" href="#__codelineno-16-9"></a><span class="x">&lt;/div&gt;</span>
+</code></pre></div>
 <p>The JavaScript in the plugin works by looking for the specific ID's used in the
 above HTML. The form input for the user to type the search query must be
 identified with <code>id="mkdocs-search-query"</code> and the div where the results will be
 placed must be identified with <code>id="mkdocs-search-results"</code>.</p>
 <p>The plugin supports the following options being set in the <a href="#theme-configuration">theme's
 configuration file</a>, <code>mkdocs_theme.yml</code>:</p>
-<h3 id="include_search_page">include_search_page<a class="headerlink" href="#include_search_page" title="Permanent link"></a></h3>
+<h3 id="include_search_page">include_search_page<a class="headerlink" href="#include_search_page" title="Permanent link">&para;</a></h3>
 <p>Determines whether the search plugin expects the theme to provide a dedicated
 search page via a template located at <code>search/search.html</code>.</p>
 <p>When <code>include_search_page</code> is set to <code>true</code>, the search template will be built
@@ -1568,7 +2418,7 @@ theme.</p>
 <p>When <code>include_search_page</code> is set to <code>false</code> or not defined, it is expected that
 the theme provide some other mechanisms for displaying search results. For
 example, the <code>mkdocs</code> theme displays results on any page via a modal.</p>
-<h3 id="search_index_only">search_index_only<a class="headerlink" href="#search_index_only" title="Permanent link"></a></h3>
+<h3 id="search_index_only">search_index_only<a class="headerlink" href="#search_index_only" title="Permanent link">&para;</a></h3>
 <p>Determines whether the search plugin should only generate a search index or a
 complete search solution.</p>
 <p>When <code>search_index_only</code> is set to <code>false</code>, then the search plugin modifies the
@@ -1581,12 +2431,12 @@ provided index file is the responsibility of the theme.</p>
 <p>The search index is written to a JSON file at <code>search/search_index.json</code> in the
 <a href="../../user-guide/configuration/#site_dir">site_dir</a>. The JSON object contained within the file may contain up to three
 objects.</p>
-<pre><code class="language-json">{
-    config: {...},
-    data: [...],
-    index: {...}
-}
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="w">    </span><span class="err">co</span><span class="kc">nf</span><span class="err">ig</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="err">...</span><span class="p">},</span><span class="w"></span>
+<a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a><span class="w">    </span><span class="err">da</span><span class="kc">ta</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">...</span><span class="p">],</span><span class="w"></span>
+<a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a><span class="w">    </span><span class="err">i</span><span class="kc">n</span><span class="err">dex</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="err">...</span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a><span class="p">}</span><span class="w"></span>
+</code></pre></div>
 <p>If present, the <code>config</code> object contains the key/value pairs of config options
 defined for the plugin in the user's <code>mkdocs.yml</code> config file under
 <code>plugings.search</code>. The <code>config</code> object was new in MkDocs version <em>1.0</em>.</p>
@@ -1598,7 +2448,7 @@ performance improvements for larger sites. Note that the pre-built index is only
 created if the user explicitly enables the <a href="../../user-guide/configuration/#prebuild_index">prebuild_index</a> config option.
 Themes should expect the index to not be present, but can choose to use the
 index when it is available. The <code>index</code> object was new in MkDocs version <em>1.0</em>.</p>
-<h2 id="packaging-themes">Packaging Themes<a class="headerlink" href="#packaging-themes" title="Permanent link"></a></h2>
+<h2 id="packaging-themes">Packaging Themes<a class="headerlink" href="#packaging-themes" title="Permanent link">&para;</a></h2>
 <p>MkDocs makes use of <a href="https://packaging.python.org/en/latest/">Python packaging</a> to distribute themes. This comes with a
 few requirements.</p>
 <p>To see an example of a package containing one theme, see the <a href="https://mkdocs.github.io/mkdocs-bootstrap/">MkDocs Bootstrap
@@ -1614,50 +2464,50 @@ your theme, your users can more easily install it, they can rely on a default
 <a href="#theme-configuration">configuration</a> being defined, and they can then take advantage of the
 <a href="../../user-guide/configuration/#custom_dir">custom_dir</a> to make tweaks to your theme to better suit their needs.</p>
 </div>
-<h3 id="package-layout">Package Layout<a class="headerlink" href="#package-layout" title="Permanent link"></a></h3>
+<h3 id="package-layout">Package Layout<a class="headerlink" href="#package-layout" title="Permanent link">&para;</a></h3>
 <p>The following layout is recommended for themes. Two files at the top level
 directory called <code>MANIFEST.in</code> and <code>setup.py</code> beside the theme directory which
 contains an empty <code>__init__.py</code> file, a theme configuration file
 (<code>mkdocs_theme.yml</code>), and your template and media files.</p>
-<pre><code class="language-no-highlight">.
-|-- MANIFEST.in
-|-- theme_name
-|   |-- __init__.py
-|   |-- mkdocs_theme.yml
-|   |-- main.html
-|   |-- styles.css
-`-- setup.py
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>.
+<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>|-- MANIFEST.in
+<a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a>|-- theme_name
+<a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a>|   |-- __init__.py
+<a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a>|   |-- mkdocs_theme.yml
+<a id="__codelineno-18-6" name="__codelineno-18-6" href="#__codelineno-18-6"></a>|   |-- main.html
+<a id="__codelineno-18-7" name="__codelineno-18-7" href="#__codelineno-18-7"></a>|   |-- styles.css
+<a id="__codelineno-18-8" name="__codelineno-18-8" href="#__codelineno-18-8"></a>`-- setup.py
+</code></pre></div>
 <p>The <code>MANIFEST.in</code> file should contain the following contents but with
 theme_name updated and any extra file extensions added to the include.</p>
-<pre><code class="language-no-highlight">recursive-include theme_name *.ico *.js *.css *.png *.html *.eot *.svg *.ttf *.woff
-recursive-exclude * __pycache__
-recursive-exclude * *.py[co]
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>recursive-include theme_name *.ico *.js *.css *.png *.html *.eot *.svg *.ttf *.woff
+<a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a>recursive-exclude * __pycache__
+<a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a>recursive-exclude * *.py[co]
+</code></pre></div>
 <p>The <code>setup.py</code> should include the following text with the modifications
 described below.</p>
-<pre><code class="language-python">from setuptools import setup, find_packages
-
-VERSION = '0.0.1'
-
-setup(
-    name=&quot;mkdocs-themename&quot;,
-    version=VERSION,
-    url='',
-    license='',
-    description='',
-    author='',
-    author_email='',
-    packages=find_packages(),
-    include_package_data=True,
-    entry_points={
-        'mkdocs.themes': [
-            'themename = theme_name',
-        ]
-    },
-    zip_safe=False
-)
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="kn">from</span> <span class="nn">setuptools</span> <span class="kn">import</span> <span class="n">setup</span><span class="p">,</span> <span class="n">find_packages</span>
+<a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a>
+<a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a><span class="n">VERSION</span> <span class="o">=</span> <span class="s1">&#39;0.0.1&#39;</span>
+<a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a>
+<a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a><span class="n">setup</span><span class="p">(</span>
+<a id="__codelineno-20-6" name="__codelineno-20-6" href="#__codelineno-20-6"></a>    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;mkdocs-themename&quot;</span><span class="p">,</span>
+<a id="__codelineno-20-7" name="__codelineno-20-7" href="#__codelineno-20-7"></a>    <span class="n">version</span><span class="o">=</span><span class="n">VERSION</span><span class="p">,</span>
+<a id="__codelineno-20-8" name="__codelineno-20-8" href="#__codelineno-20-8"></a>    <span class="n">url</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span>
+<a id="__codelineno-20-9" name="__codelineno-20-9" href="#__codelineno-20-9"></a>    <span class="n">license</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span>
+<a id="__codelineno-20-10" name="__codelineno-20-10" href="#__codelineno-20-10"></a>    <span class="n">description</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span>
+<a id="__codelineno-20-11" name="__codelineno-20-11" href="#__codelineno-20-11"></a>    <span class="n">author</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span>
+<a id="__codelineno-20-12" name="__codelineno-20-12" href="#__codelineno-20-12"></a>    <span class="n">author_email</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span>
+<a id="__codelineno-20-13" name="__codelineno-20-13" href="#__codelineno-20-13"></a>    <span class="n">packages</span><span class="o">=</span><span class="n">find_packages</span><span class="p">(),</span>
+<a id="__codelineno-20-14" name="__codelineno-20-14" href="#__codelineno-20-14"></a>    <span class="n">include_package_data</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+<a id="__codelineno-20-15" name="__codelineno-20-15" href="#__codelineno-20-15"></a>    <span class="n">entry_points</span><span class="o">=</span><span class="p">{</span>
+<a id="__codelineno-20-16" name="__codelineno-20-16" href="#__codelineno-20-16"></a>        <span class="s1">&#39;mkdocs.themes&#39;</span><span class="p">:</span> <span class="p">[</span>
+<a id="__codelineno-20-17" name="__codelineno-20-17" href="#__codelineno-20-17"></a>            <span class="s1">&#39;themename = theme_name&#39;</span><span class="p">,</span>
+<a id="__codelineno-20-18" name="__codelineno-20-18" href="#__codelineno-20-18"></a>        <span class="p">]</span>
+<a id="__codelineno-20-19" name="__codelineno-20-19" href="#__codelineno-20-19"></a>    <span class="p">},</span>
+<a id="__codelineno-20-20" name="__codelineno-20-20" href="#__codelineno-20-20"></a>    <span class="n">zip_safe</span><span class="o">=</span><span class="kc">False</span>
+<a id="__codelineno-20-21" name="__codelineno-20-21" href="#__codelineno-20-21"></a><span class="p">)</span>
+</code></pre></div>
 <p>Fill in the URL, license, description, author and author email address.</p>
 <p>The name should follow the convention <code>mkdocs-themename</code> (like
 <code>mkdocs-bootstrap</code> and <code>mkdocs-bootswatch</code>), starting with MkDocs, using
@@ -1672,7 +2522,7 @@ should contain all of the other theme files. The minimum requirement is that
 it includes a <code>main.html</code> for the theme. It <strong>must</strong> also include a
 <code>__init__.py</code> file which should be empty, this file tells Python that the
 directory is a package.</p>
-<h3 id="theme-configuration">Theme Configuration<a class="headerlink" href="#theme-configuration" title="Permanent link"></a></h3>
+<h3 id="theme-configuration">Theme Configuration<a class="headerlink" href="#theme-configuration" title="Permanent link">&para;</a></h3>
 <p>A packaged theme is required to include a configuration file named
 <code>mkdocs_theme.yml</code> which is placed in the root of your template files. The file
 should contain default configuration options for the theme. However, if the
@@ -1683,23 +2533,23 @@ file as that file is not loaded from <code>theme.custom_dir</code>.</p>
 those options will be made available in the templates to control behavior.
 For example, a theme might want to make a sidebar optional and include the
 following in the <code>mkdocs_theme.yml</code> file:</p>
-<pre><code class="language-yaml">show_sidebar: true
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="nt">show_sidebar</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w"></span>
+</code></pre></div>
 <p>Then in a template, that config option could be referenced:</p>
-<pre><code class="language-django">{% if config.theme.show_sidebar %}
-&lt;div id=&quot;sidebar&quot;&gt;...&lt;/div&gt;
-{% endif %}
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="cp">{%</span> <span class="k">if</span> <span class="nv">config.theme.show_sidebar</span> <span class="cp">%}</span><span class="x"></span>
+<a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a><span class="x">&lt;div id=&quot;sidebar&quot;&gt;...&lt;/div&gt;</span>
+<a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a><span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span><span class="x"></span>
+</code></pre></div>
 <p>And the user could override the default in their project's <code>mkdocs.yml</code> config
 file:</p>
-<pre><code class="language-yaml">theme:
-    name: themename
-    show_sidebar: false
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="nt">theme</span><span class="p">:</span><span class="w"></span>
+<a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a><span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">themename</span><span class="w"></span>
+<a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a><span class="w">    </span><span class="nt">show_sidebar</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span><span class="w"></span>
+</code></pre></div>
 <p>In addition to arbitrary options defined by the theme, MkDocs defines a few
 special options which alters its behavior:</p>
 <div class="admonition block">
-<h4 id="locale">locale<a class="headerlink" href="#locale" title="Permanent link"></a></h4>
+<h4 id="locale">locale<a class="headerlink" href="#locale" title="Permanent link">&para;</a></h4>
 <p>This option mirrors the <a href="../../user-guide/configuration/#theme">theme</a> config option of the same name. If this
 value is not defined in the <code>mkdocs_theme.yml</code> file and the user does not
 set it in <code>mkdocs.yml</code> then it will default to <code>en</code> (English). The value
@@ -1712,25 +2562,25 @@ information.</p>
 to a <code>Locale</code> object. The object contains <code>Locale.language</code> and
 <code>Locale.territory</code> attributes and will resolve as a string from within a
 template. Therefore, the following will work fine:</p>
-<pre><code>&lt;html lang="{ config.theme.locale }"&gt;
-</code></pre>
+<div class="highlight"><pre><span></span><code>&lt;html lang=&quot;{ config.theme.locale }&quot;&gt;
+</code></pre></div>
 <p>If the locale was set to <code>fr_CA</code> (Canadian French), then the above template
 would render as:</p>
-<pre><code>&lt;html lang="fr_CA"&gt;
-</code></pre>
+<div class="highlight"><pre><span></span><code>&lt;html lang=&quot;fr_CA&quot;&gt;
+</code></pre></div>
 <p>If you did not want the territory attribute to be included, then reference
 the <code>language</code> attribute directly:</p>
-<pre><code>&lt;html lang="{ config.theme.locale.language }"&gt;
-</code></pre>
+<div class="highlight"><pre><span></span><code>&lt;html lang=&quot;{ config.theme.locale.language }&quot;&gt;
+</code></pre></div>
 <p>That would render as:</p>
-<pre><code>&lt;html lang="fr"&gt;
-</code></pre>
-<h4 id="static_templates">static_templates<a class="headerlink" href="#static_templates" title="Permanent link"></a></h4>
+<div class="highlight"><pre><span></span><code>&lt;html lang=&quot;fr&quot;&gt;
+</code></pre></div>
+<h4 id="static_templates">static_templates<a class="headerlink" href="#static_templates" title="Permanent link">&para;</a></h4>
 <p>This option mirrors the <a href="../../user-guide/configuration/#theme">theme</a> config option of the same name and allows
 some defaults to be set by the theme. Note that while the user can add
 templates to this list, the user cannot remove templates included in the
 theme's config.</p>
-<h4 id="extends">extends<a class="headerlink" href="#extends" title="Permanent link"></a></h4>
+<h4 id="extends">extends<a class="headerlink" href="#extends" title="Permanent link">&para;</a></h4>
 <p>Defines a parent theme that this theme inherits from. The value should be
 the string name of the parent theme. Normal <a href="https://jinja.palletsprojects.com/en/latest/templates/#template-inheritance">Jinja inheritance rules</a>
 apply.</p>
@@ -1738,18 +2588,18 @@ apply.</p>
 <p>Plugins may also define some options which allow the theme to inform a plugin
 about which set of plugin options it expects. See the documentation for any
 plugins you may wish to support in your theme.</p>
-<h3 id="distributing-themes">Distributing Themes<a class="headerlink" href="#distributing-themes" title="Permanent link"></a></h3>
+<h3 id="distributing-themes">Distributing Themes<a class="headerlink" href="#distributing-themes" title="Permanent link">&para;</a></h3>
 <p>With the above changes, your theme should now be ready to install. This can be
 done with pip, using <code>pip install .</code> if you are still in the same directory as
 the setup.py.</p>
 <p>Most Python packages, including MkDocs, are distributed on PyPI. To do this,
 you should run the following command.</p>
-<pre><code class="language-no-highlight">python setup.py register
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>python setup.py register
+</code></pre></div>
 <p>If you don't have an account setup, you should be prompted to create one.</p>
 <p>For a much more detailed guide, see the official Python packaging
 documentation for <a href="https://packaging.python.org/en/latest/distributing/">Packaging and Distributing Projects</a>.</p>
-<h2 id="supporting-theme-localizationtranslation">Supporting theme Localization/Translation<a class="headerlink" href="#supporting-theme-localizationtranslation" title="Permanent link"></a></h2>
+<h2 id="supporting-theme-localizationtranslation">Supporting theme Localization/Translation<a class="headerlink" href="#supporting-theme-localizationtranslation" title="Permanent link">&para;</a></h2>
 <p>While the built-in themes provide support for <a href="../../user-guide/localizing-your-theme/">localization/translation</a> of
 templates, custom themes and third-party themes may choose not to. Regardless,
 the <a href="#locale"><code>locale</code></a> setting of the <code>theme</code> configuration option is always
@@ -1761,17 +2611,17 @@ will experience consistent behavior regardless of the theme they may choose.</p>
 However, if a theme developer chooses to use the same mechanisms used by the
 built-in themes, the sections below outline how to enable and make use of the
 same commands utilized by MkDocs.</p>
-<h3 id="enabling-the-localizationtranslation-commands">Enabling the Localization/Translation commands<a class="headerlink" href="#enabling-the-localizationtranslation-commands" title="Permanent link"></a></h3>
+<h3 id="enabling-the-localizationtranslation-commands">Enabling the Localization/Translation commands<a class="headerlink" href="#enabling-the-localizationtranslation-commands" title="Permanent link">&para;</a></h3>
 <p>MkDocs includes some helper commands which are light wrappers around <a href="https://babel.pocoo.org/en/latest/setup.html">pybabel's
 commands</a>. To use the commands on your own theme, add the following to
 your theme's <code>setup.py</code> script:</p>
-<pre><code class="language-python">from mkdocs.commands.setup import babel_cmdclass
-
-setup(
-    ...
-    cmdclass=babel_cmdclass
-)
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="kn">from</span> <span class="nn">mkdocs.commands.setup</span> <span class="kn">import</span> <span class="n">babel_cmdclass</span>
+<a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a>
+<a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a><span class="n">setup</span><span class="p">(</span>
+<a id="__codelineno-25-4" name="__codelineno-25-4" href="#__codelineno-25-4"></a>    <span class="o">...</span>
+<a id="__codelineno-25-5" name="__codelineno-25-5" href="#__codelineno-25-5"></a>    <span class="n">cmdclass</span><span class="o">=</span><span class="n">babel_cmdclass</span>
+<a id="__codelineno-25-6" name="__codelineno-25-6" href="#__codelineno-25-6"></a><span class="p">)</span>
+</code></pre></div>
 <p>Note that <code>cmdclass=babel_cmdclass</code> was added an a parameter passed to
 the <code>setup</code> function.</p>
 <div class="admonition warning">
@@ -1782,12 +2632,12 @@ have installed the necessary dependencies
 (using <code>pip install mkdocs[i18n]</code>) in order for the commands to be
 available for use.</p>
 </div>
-<h3 id="using-the-localizationtranslation-commands">Using the Localization/Translation commands<a class="headerlink" href="#using-the-localizationtranslation-commands" title="Permanent link"></a></h3>
+<h3 id="using-the-localizationtranslation-commands">Using the Localization/Translation commands<a class="headerlink" href="#using-the-localizationtranslation-commands" title="Permanent link">&para;</a></h3>
 <p>Since the translation commands are embedded in the <code>setup.py</code> script of your
 custom theme they should be called from the root of your theme's working
 tree as follows:</p>
-<pre><code class="language-bash">python setup.py &lt;command_name&gt; [OPTIONS]
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a>python setup.py &lt;command_name&gt; <span class="o">[</span>OPTIONS<span class="o">]</span>
+</code></pre></div>
 <p>Each command provides a detailed list of options available with the <code>-h/--help</code>
 option.</p>
 <p>For an overview of the workflow used by MkDocs to translate the built-in
@@ -1799,7 +2649,7 @@ and the long option name as the key. See MkDocs' own <a href="https://github.com
 example.</p>
 <p>A summary of changes/additions to the behavior and options of the upstream
 <a href="https://babel.pocoo.org/en/latest/setup.html">pybabel commands</a> are summarized below.</p>
-<h4 id="compile_catalog">compile_catalog<a class="headerlink" href="#compile_catalog" title="Permanent link"></a></h4>
+<h4 id="compile_catalog">compile_catalog<a class="headerlink" href="#compile_catalog" title="Permanent link">&para;</a></h4>
 <p>The <code>-t/--theme</code> option has been added to this command. The <code>theme</code> specified
 must be a <code>theme</code> defined as a entry point in the same <code>setup.py</code> script. Other
 themes will not be recognized. If only one <code>theme</code> has been defined as an entry
@@ -1812,7 +2662,7 @@ for each theme included in a package.</p>
 entry point is used to define a default value of the <code>-d/--directory</code> option.
 The <code>--directory</code> option is set to <code>{theme_dir}/locales</code>. If a <code>directory</code> is
 passed to the <code>--directory</code> option, then the <code>theme</code> option is ignored.</p>
-<h4 id="extract_messages">extract_messages<a class="headerlink" href="#extract_messages" title="Permanent link"></a></h4>
+<h4 id="extract_messages">extract_messages<a class="headerlink" href="#extract_messages" title="Permanent link">&para;</a></h4>
 <p>The <code>-t/--theme</code> option has been added to this command. The <code>theme</code> specified
 must be a <code>theme</code> defined as a entry point in the same <code>setup.py</code> script. Other
 themes will not be recognized. If only one <code>theme</code> has been defined as an entry
@@ -1834,7 +2684,7 @@ Defaults to <code>messages</code>.</p>
 built-in themes. However, if that mapping file does not meet your theme's needs
 to can override it by providing your own and passing the path of that file into
 the option.</p>
-<h4 id="init_catalog">init_catalog<a class="headerlink" href="#init_catalog" title="Permanent link"></a></h4>
+<h4 id="init_catalog">init_catalog<a class="headerlink" href="#init_catalog" title="Permanent link">&para;</a></h4>
 <p>The <code>-t/--theme</code> option has been added to this command. The <code>theme</code> specified
 must be a <code>theme</code> defined as a entry point in the same <code>setup.py</code> script. Other
 themes will not be recognized. If only one <code>theme</code> has been defined as an entry
@@ -1849,7 +2699,7 @@ entry point is used to define a default value for the <code>-i/--input-file</cod
 <code>{theme_dir}/{domain}.pot</code> (<code>domain</code> defaults to <code>messages</code>) and <code>--output-dir</code>
 is set to <code>{theme_dir}/locales</code>. If a path is provided to either option, then
 the <code>theme</code> option is ignored for that option.</p>
-<h4 id="update_catalog">update_catalog<a class="headerlink" href="#update_catalog" title="Permanent link"></a></h4>
+<h4 id="update_catalog">update_catalog<a class="headerlink" href="#update_catalog" title="Permanent link">&para;</a></h4>
 <p>The <code>-t/--theme</code> option has been added to this command. The <code>theme</code> specified
 must be a <code>theme</code> defined as a entry point in the same <code>setup.py</code> script. Other
 themes will not be recognized. If only one <code>theme</code> has been defined as an entry
@@ -1864,7 +2714,7 @@ entry point is used to define a default value for the <code>-i/--input-file</cod
 <code>{theme_dir}/{domain}.pot</code> (<code>domain</code> defaults to <code>messages</code>) and <code>--output-dir</code>
 is set to <code>{theme_dir}/locales</code>. If a path is provided to either option, then
 the <code>theme</code> option is ignored for that option.</p>
-<h3 id="example-custom-theme-localizationtranslation-workflow">Example custom theme Localization/Translation workflow<a class="headerlink" href="#example-custom-theme-localizationtranslation-workflow" title="Permanent link"></a></h3>
+<h3 id="example-custom-theme-localizationtranslation-workflow">Example custom theme Localization/Translation workflow<a class="headerlink" href="#example-custom-theme-localizationtranslation-workflow" title="Permanent link">&para;</a></h3>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>If your theme inherits from an existing theme which already provides
@@ -1877,40 +2727,40 @@ the same time, you may override any of parent theme's translations!</p>
 <p>Let's suppose that you're working on your own fork of the
 <a href="https://github.com/mkdocs/mkdocs-basic-theme">mkdocs-basic-theme</a> and want to add translations to it.</p>
 <p>You would first modify the <code>setup.py</code> like this:</p>
-<pre><code class="language-diff">--- a/setup.py
-+++ b/setup.py
-@@ -1,4 +1,5 @@
- from setuptools import setup, find_packages
-+from mkdocs.commands.setup import babel_cmdclass
-
- VERSION = '1.1'
-
-@@ -18,5 +19,6 @@ setup(
-             'basictheme = basic_theme',
-         ]
-     },
--    zip_safe=False
-+    zip_safe=False,
-+    cmdclass=babel_cmdclass
- )
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a><span class="gd">--- a/setup.py</span><span class="w"></span>
+<a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a><span class="gi">+++ b/setup.py</span><span class="w"></span>
+<a id="__codelineno-27-3" name="__codelineno-27-3" href="#__codelineno-27-3"></a><span class="gu">@@ -1,4 +1,5 @@</span><span class="w"></span>
+<a id="__codelineno-27-4" name="__codelineno-27-4" href="#__codelineno-27-4"></a><span class="w"> </span>from setuptools import setup, find_packages<span class="w"></span>
+<a id="__codelineno-27-5" name="__codelineno-27-5" href="#__codelineno-27-5"></a><span class="gi">+from mkdocs.commands.setup import babel_cmdclass</span><span class="w"></span>
+<a id="__codelineno-27-6" name="__codelineno-27-6" href="#__codelineno-27-6"></a>
+<a id="__codelineno-27-7" name="__codelineno-27-7" href="#__codelineno-27-7"></a><span class="w"> </span>VERSION = &#39;1.1&#39;<span class="w"></span>
+<a id="__codelineno-27-8" name="__codelineno-27-8" href="#__codelineno-27-8"></a>
+<a id="__codelineno-27-9" name="__codelineno-27-9" href="#__codelineno-27-9"></a><span class="gu">@@ -18,5 +19,6 @@ setup(</span><span class="w"></span>
+<a id="__codelineno-27-10" name="__codelineno-27-10" href="#__codelineno-27-10"></a><span class="w"> </span>            &#39;basictheme = basic_theme&#39;,<span class="w"></span>
+<a id="__codelineno-27-11" name="__codelineno-27-11" href="#__codelineno-27-11"></a><span class="w"> </span>        ]<span class="w"></span>
+<a id="__codelineno-27-12" name="__codelineno-27-12" href="#__codelineno-27-12"></a><span class="w"> </span>    },<span class="w"></span>
+<a id="__codelineno-27-13" name="__codelineno-27-13" href="#__codelineno-27-13"></a><span class="gd">-    zip_safe=False</span><span class="w"></span>
+<a id="__codelineno-27-14" name="__codelineno-27-14" href="#__codelineno-27-14"></a><span class="gi">+    zip_safe=False,</span><span class="w"></span>
+<a id="__codelineno-27-15" name="__codelineno-27-15" href="#__codelineno-27-15"></a><span class="gi">+    cmdclass=babel_cmdclass</span><span class="w"></span>
+<a id="__codelineno-27-16" name="__codelineno-27-16" href="#__codelineno-27-16"></a><span class="w"> </span>)<span class="w"></span>
+</code></pre></div>
 <p>Next, you would edit the templates by wrapping text in your HTML sources with
 <code>{% trans %}</code> and <code>{% endtrans %}</code> as follows:</p>
-<pre><code class="language-diff">--- a/basic_theme/base.html
-+++ b/basic_theme/base.html
-@@ -88,7 +88,7 @@
-
- &lt;body&gt;
-
--  &lt;h1&gt;This is an example theme for MkDocs.&lt;/h1&gt;
-+  &lt;h1&gt;{% trans %}This is an example theme for MkDocs.{% endtrans %}&lt;/h1&gt;
-
-   &lt;p&gt;
-     It is designed to be read by looking at the theme HTML which is heavily
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a><span class="gd">--- a/basic_theme/base.html</span><span class="w"></span>
+<a id="__codelineno-28-2" name="__codelineno-28-2" href="#__codelineno-28-2"></a><span class="gi">+++ b/basic_theme/base.html</span><span class="w"></span>
+<a id="__codelineno-28-3" name="__codelineno-28-3" href="#__codelineno-28-3"></a><span class="gu">@@ -88,7 +88,7 @@</span><span class="w"></span>
+<a id="__codelineno-28-4" name="__codelineno-28-4" href="#__codelineno-28-4"></a>
+<a id="__codelineno-28-5" name="__codelineno-28-5" href="#__codelineno-28-5"></a><span class="w"> </span>&lt;body&gt;<span class="w"></span>
+<a id="__codelineno-28-6" name="__codelineno-28-6" href="#__codelineno-28-6"></a>
+<a id="__codelineno-28-7" name="__codelineno-28-7" href="#__codelineno-28-7"></a><span class="gd">-  &lt;h1&gt;This is an example theme for MkDocs.&lt;/h1&gt;</span><span class="w"></span>
+<a id="__codelineno-28-8" name="__codelineno-28-8" href="#__codelineno-28-8"></a><span class="gi">+  &lt;h1&gt;{% trans %}This is an example theme for MkDocs.{% endtrans %}&lt;/h1&gt;</span><span class="w"></span>
+<a id="__codelineno-28-9" name="__codelineno-28-9" href="#__codelineno-28-9"></a>
+<a id="__codelineno-28-10" name="__codelineno-28-10" href="#__codelineno-28-10"></a><span class="w"> </span>  &lt;p&gt;<span class="w"></span>
+<a id="__codelineno-28-11" name="__codelineno-28-11" href="#__codelineno-28-11"></a><span class="w"> </span>    It is designed to be read by looking at the theme HTML which is heavily<span class="w"></span>
+</code></pre></div>
 <p>Then you would follow the <a href="../translations/">Translation Guide</a> as usual to get your translations
 running.</p>
-<h3 id="packaging-translations-with-your-theme">Packaging Translations with your theme<a class="headerlink" href="#packaging-translations-with-your-theme" title="Permanent link"></a></h3>
+<h3 id="packaging-translations-with-your-theme">Packaging Translations with your theme<a class="headerlink" href="#packaging-translations-with-your-theme" title="Permanent link">&para;</a></h3>
 <p>While the Portable Object Template (<code>pot</code>) file created by the
 <code>extract_messages</code> command and the Portable Object (<code>po</code>) files created by the
 <code>init_catalog</code> and <code>update_catalog</code> commands are useful for creating and
@@ -1919,8 +2769,8 @@ be included in a packaged release of a theme. When MkDocs builds a site with
 translations, it only makes use of the binary <code>mo</code> files(s) for the specified
 locale. Therefore, when <a href="#packaging-themes">packaging a theme</a>, you would need to make the
 following addition to your <code>MANIFEST.in</code> file:</p>
-<pre><code class="language-no-highlight">recursive-include theme_name *.mo
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a>recursive-include theme_name *.mo
+</code></pre></div>
 <p>Then, before building your Python package, you will want to ensure that the
 binary <code>mo</code> file for each locale is up-to-date by running the <code>compile_catalog</code>
 command for each locale. MkDocs expects the binary <code>mo</code> files to be located at
@@ -1944,16 +2794,56 @@ different process for generating those <code>mo</code> files if you chose to do 
           </div>
         </div>
         
+          <a href="#" class="md-top md-icon" data-md-component="top" data-md-state="hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"/></svg>
+            Back to top
+          </a>
+        
       </main>
       
         <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../" class="md-footer__link md-footer__link--prev" aria-label="上一頁: 開發指南" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                上一頁
+              </span>
+              開發指南
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../translations/" class="md-footer__link md-footer__link--next" aria-label="下一頁: 翻譯" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                下一頁
+              </span>
+              翻譯
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      版權所有 &copy; 2022 <a href="#">黑潮海洋文教基金會</a>，由 <a href="#">Netabox</a> 維護
+      版權所有 &copy; 2021-2022 <a href="#">黑潮海洋文教基金會</a>，由 <a href="#">Netabox</a> 維護
     </div>
   
   
@@ -1972,10 +2862,10 @@ different process for generating those <code>mo</code> files if you chose to do 
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.22074ed6.min.js"}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tracking", "navigation.indexes", "navigation.top", "content.code.annotate", "search.highlight", "search.share", "search.suggest"], "translations": {"clipboard.copy": "\u8907\u88fd", "clipboard.copied": "\u5df2\u8907\u88fd", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\s\\-\u3000\u3001\u3002\uff0c\uff0e\uff1f\uff1b]+", "search.placeholder": "\u641c\u5c0b", "search.result.placeholder": "\u6253\u5b57\u9032\u884c\u641c\u5c0b", "search.result.none": "\u6c92\u6709\u7b26\u5408\u7684\u9805\u76ee", "search.result.one": "\u627e\u5230 1 \u500b\u7b26\u5408\u7684\u9805\u76ee", "search.result.other": "\u627e\u5230 # \u500b\u7b26\u5408\u7684\u9805\u76ee", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.22074ed6.min.js"}</script>
     
     
-      <script src="../../assets/javascripts/bundle.1514a9a0.min.js"></script>
+      <script src="../../assets/javascripts/bundle.960e086b.min.js"></script>
       
     
   </body>
